@@ -8,8 +8,8 @@ public class PhoneRecords implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private Integer id;
+	private Integer requesterid;
 	private String requesterphone;
-	private String providephone;
 	private Integer cid;
 	private Date createdate;
 	public PhoneRecords() {
@@ -22,17 +22,17 @@ public class PhoneRecords implements Serializable{
 	public void setId(Integer id) {
 		this.id = id;
 	}
+	public Integer getRequesterid() {
+		return requesterid;
+	}
+	public void setRequesterid(Integer requesterid) {
+		this.requesterid = requesterid;
+	}
 	public String getRequesterphone() {
 		return requesterphone;
 	}
 	public void setRequesterphone(String requesterphone) {
 		this.requesterphone = requesterphone;
-	}
-	public String getProvidephone() {
-		return providephone;
-	}
-	public void setProvidephone(String providephone) {
-		this.providephone = providephone;
 	}
 	public Integer getCid() {
 		return cid;
@@ -48,8 +48,8 @@ public class PhoneRecords implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "Phonerecords [id=" + id + ", requesterphone=" + requesterphone
-				+ ", providephone=" + providephone + ", cid=" + cid
+		return "PhoneRecords [id=" + id + ", requesterid=" + requesterid
+				+ ", requesterphone=" + requesterphone + ", cid=" + cid
 				+ ", createdate=" + createdate + "]";
 	}
 	

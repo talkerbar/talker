@@ -9,8 +9,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import com.talker.apiManage.IpHelp;
+import com.talker.dataManage.pojo.PhoneRecords;
 import com.talker.dataManage.pojo.Visits;
+import com.talker.dataManage.service.PhoneRecordsService;
 import com.talker.dataManage.service.VisitService;
+import com.talker.userManage.pojo.UserLoginOut;
+import com.talker.userManage.service.UserLoginService;
+import com.talker.util.CookieUtil;
+import com.talker.util.ResponseModel;
 
 /**  
  * 创建时间 : 2015-12-24 下午3:05:34
@@ -29,6 +35,10 @@ public class VisitInterceptor extends HandlerInterceptorAdapter {
 	
 	@Autowired
 	private VisitService visitService;
+	@Autowired
+	private PhoneRecordsService phoneRecordsService;
+	@Autowired
+	private UserLoginService userLoginService;
 	
 	/**
      * @discription 目前拦截器只拦截商品浏览、电话号码获取链接
@@ -53,7 +63,21 @@ public class VisitInterceptor extends HandlerInterceptorAdapter {
 			}
 		}else if("/commodity/cellnumber".equals(uri)){
 			//记录手机号获取记录
-
+			//目前获取上传者联系方式需要登录，后期会改成不是会员的情况下也能获取
+			String cid = request.getParameter("id");
+			String userid = CookieUtil.getCookieString(CookieUtil.CookieValue.COOKIE_USER_ID, request);
+			if(userid!=null && cid!=null){
+				ResponseModel rmUserInfo = userLoginService.getUserForId(Integer.parseInt(userid));
+				if(rmUserInfo.isSuccess()){
+					PhoneRecords phoneRecords = new PhoneRecords();
+					phoneRecords.setRequesterid(Integer.parseInt(userid));
+					phoneRecords.setRequesterphone(((UserLoginOut)rmUserInfo.getObject()).getUserInfoOut().getTelephone());
+					phoneRecords.setCid(Integer.parseInt(cid));
+					boolean result = phoneRecordsService.addPhoneRecords(phoneRecords);
+					log.debug("增加商品电话获取记录：" + result);
+				}
+			}
+			
 		}
 		return true;
 	}

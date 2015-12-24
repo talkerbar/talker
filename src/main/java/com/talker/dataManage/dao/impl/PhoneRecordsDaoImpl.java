@@ -14,7 +14,13 @@ public class PhoneRecordsDaoImpl implements PhoneRecordsDao {
 	private JdbcTemplate jdbcTemplate;
 
 	public boolean addPhoneRecords(PhoneRecords phoneRecords) {
-		return false;
+		boolean result = false;
+		String sql = "insert into phonerecords(requesterid,requesterphone,cid,createdate) values(?,?,?,?)";
+		Object[] parmas = {phoneRecords.getRequesterid(),phoneRecords.getRequesterphone(),phoneRecords.getCid(),phoneRecords.getCreatedate()};
+		int i = jdbcTemplate.update(sql, parmas);
+		if(i!=0)
+			result = true;
+		return result;
 	}
 
 	@SuppressWarnings("deprecation")
