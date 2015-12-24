@@ -14,7 +14,13 @@ public class VisitDaoImpl implements VisitDao {
 	private JdbcTemplate jdbcTemplate;
 
 	public boolean addVisit(Visits visits) {
-		return false;
+		boolean result = false;
+		String sql = "insert into visits(ip,city,visitdate,cid) values(?,?,?,?)";
+		Object[] parmas = {visits.getIp(),visits.getCity(),visits.getVisitDate(),visits.getcId()};
+		int i = jdbcTemplate.update(sql, parmas);
+		if(i!=0)
+			result = true;
+		return result;
 	}
 
 	@SuppressWarnings("deprecation")

@@ -38,6 +38,10 @@
 	              </property>
 	            </bean>
 	        </mvc:interceptor>
+	        <mvc:interceptor>
+	        	<mvc:mapping path="/**"/>
+	        	<bean class="com.talker.system.security.interceptor.VisitInterceptor"/>
+	        </mvc:interceptor>
 	    </mvc:interceptors>
 	    
 	    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

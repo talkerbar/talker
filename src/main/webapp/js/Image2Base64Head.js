@@ -108,7 +108,7 @@ $(function(){
 			}
 		});
 	});
-	//确认提交时间
+	//确认提交事件
 	$('.head-pre-save').bind('click',function(){
 		var base64 = ($('#pre-head-base64').attr('src')).split(",")[1];
 		$.ajax({

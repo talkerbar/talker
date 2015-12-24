@@ -1,5 +1,5 @@
 /* 2015-09-28 上传图片*/
-function convertImgToBase64(url, callback, outputFormat) {
+function convertImgToBase64Commodity(url, callback, outputFormat) {
 	var canvas = document.createElement('CANVAS');
 	var ctx = canvas.getContext('2d');
 	var img = new Image;
@@ -34,7 +34,7 @@ function getObjectURL(file) {
 $(function(){
 	$('#image').bind('change', function(event) {
 		var imageUrl = getObjectURL($(this)[0].files[0]);
-		convertImgToBase64(imageUrl, function(base64Img) {
+		convertImgToBase64Commodity(imageUrl, function(base64Img) {
 			/*$('#img').attr('src', base64Img);
 			$('#base64').val(base64Img.split(",")[1]);*/
 			var index4img = $('#index4img').val();
