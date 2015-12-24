@@ -81,11 +81,6 @@
 	            <img src="/talker/images/3.jpg" alt="">
 	          </a>
 	        </li>
-	        <li class="swiper-slide">
-	          <a href="">
-	            <img src="/talker/images/2015ad.jpg" alt="">
-	          </a>
-	        </li>
       </ul>
       <ol class="swiper-pagination swiper-pagination-tab"></ol>
     </div>
