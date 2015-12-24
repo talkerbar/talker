@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:task="http://www.springframework.org/schema/task"
+    xmlns:cache="http://www.springframework.org/schema/cache"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/task  
+		http://www.springframework.org/schema/task/spring-task.xsd 
+        http://www.springframework.org/schema/cache 
+     	http://www.springframework.org/schema/cache/spring-cache.xsd">
+	    <!-- 开启任务 -->
+	    <context:component-scan base-package="com.talker"/>
+	    <task:annotation-driven/>
+	    <context:annotation-config/> 
+	    <mvc:annotation-driven />
+	     <!-- 拦截器 -->
+	     <mvc:interceptors>
+	        <mvc:interceptor>
+	            <mvc:mapping path="/**"/>
+	            <bean class="com.talker.system.security.interceptor.SecurityInterceptor">
+	              <!-- 不检测的Controller 多个以逗号隔开 -->
+	              <property name="uncheckedUrl">
+	                 <value>/index,/list,/item,/userlogin/regist,/userlogin/login,/commodity/get,/commodity/allschoolname,/commodity/allsortname,/login,/menu/islogin,/commoditymessage/get</value>
+	              </property>
+	              <!-- 登录URL -->
+	              <property name="login">
+	                 <value>/login</value>
+	              </property>
+	            </bean>
+	        </mvc:interceptor>
+	    </mvc:interceptors>
+	    
+	    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	        <property name="prefix" value="/WEB-INF/jsp/"/>
+	        <property name="suffix" value=".jsp"/>
+	    </bean>
+	    
+	    <!-- SPRING MVC 文件上传  -->
+	    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
+	        <property name="defaultEncoding" value="utf-8"></property>   
+	        <property name="maxUploadSize" value="10485760000"></property>  
+	        <property name="maxInMemorySize" value="40960"></property>
+	   </bean>
+   
+</beans>

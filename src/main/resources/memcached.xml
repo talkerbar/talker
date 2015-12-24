@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop" 
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans   
+    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd  
+    http://www.springframework.org/schema/context   
+    http://www.springframework.org/schema/context/spring-context-3.1.xsd  
+    http://www.springframework.org/schema/aop   
+    http://www.springframework.org/schema/aop/spring-aop-3.1.xsd  
+    http://www.springframework.org/schema/tx   
+    http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+    <!-- java_memcached-release_2.6.6 -->
+    <bean id="memcachedPool" class="com.whalin.MemCached.SockIOPool" factory-method="getInstance" init-method="initialize" lazy-init="false" destroy-method="shutDown">
+        <constructor-arg>
+            <value>memcachedPool</value>
+        </constructor-arg>
+        <property name="servers">
+            <list>
+                <value>${cache.ip}</value>
+            </list>
+        </property>
+        <property name="initConn">
+            <value>${cache.initConn}</value>
+        </property>
+        <property name="minConn">
+            <value>${cache.minConn}</value>
+        </property>
+        <property name="maxConn">
+            <value>${cache.maxConn}</value>
+        </property>
+        <property name="maintSleep">
+            <value>${cache.maintSleep}</value>
+        </property>
+        <!-- TCP/Socket的参数，如果是true在写数据时不缓冲，立即发送出去参数 -->
+        <property name="nagle">
+            <value>${cache.nagle}</value>
+        </property>
+        <!-- 连接超时/阻塞读取数据的超时间是 -->
+        <property name="socketTO">
+            <value>${cache.socketTO}</value>
+        </property>
+    </bean>
+    
+    <bean id="memcachedClient" class="com.whalin.MemCached.MemCachedClient" >
+        <constructor-arg>
+            <value>memcachedPool</value>
+        </constructor-arg>
+    </bean>
+    
+</beans>

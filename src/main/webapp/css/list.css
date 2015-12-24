@@ -1,0 +1,198 @@
+.inline-block{
+  display: inline-block;
+  vertical-align: top;
+}
+/* 学校和分类 */
+.warp-school-sort{
+   width: 1200px;
+   border: 1px solid #ddd;
+   margin: 20px auto 0px auto;
+}
+.warp-school-sort li{
+   float: left;
+   height: 40px;
+   line-height: 40px;
+   padding: 0px 20px;
+   cursor: pointer;
+}
+.warp-school-sort li:hover{
+	/* background: #ff649d; */
+	color:#ff649d;
+}
+.current-sort{
+	color:#ff649d;
+}
+.warp-school{
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+.warp-school-title,.warp-sort-title{
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bolder;
+  color: #666;
+}
+.warp-school-con,.warp-sort-con{
+  width: 1099px;
+  min-height:40px;
+  border-left: 1px solid #ddd;
+}
+
+/* 排序 */
+.warp-sequence{
+  width: 1200px;
+  margin: 10px auto 0px auto;
+  height: 32px;
+  line-height: 32px;
+}
+.warp-sequence-left{
+  height: 30px;
+  float: left;
+}
+.warp-sequence-left li{
+  float: left;
+  width: 100px;
+  text-align: center;
+  margin-right: 15px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+.warp-sequence-right{
+  height: 30px;
+  float: right;
+}
+.warp-sequence-left li:not(.current):hover{
+  border: 1px solid #ff649d;
+  color: #ff649d;
+}
+li.current{
+  border: 1px solid #ff649d;
+  background: #ff649d;
+  color: #fff;
+}
+
+/* 商品列表 */
+.warp-commodity{
+  width: 1200px;
+  box-sizing:border-box;
+  margin: 15px auto 0px auto;
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+.warp-commodity-list{
+  overflow: hidden;
+}
+.commodity-list{
+  width: 299.75px;
+  height: 400px;
+  box-sizing:border-box;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  float: left;
+}
+.commodity-list-img{
+  width: 299.75px;
+  height: 260px;
+  box-sizing:border-box;
+  border-bottom: 1px solid #ddd;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.commodity-list-img img{
+  max-width: 260px;
+  max-height: 240px;
+  border-radius: 4px;
+}
+.commodity-list-title > a:hover{
+  color: #ff649d;
+  text-decoration: underline;
+}
+.commodity-list-school > a:hover{
+  color: #ff649d;
+  text-decoration: underline;
+}
+.commodity-list-title,.commodity-list-price,.commodity-list-school{
+  height: 30px;
+}
+.commodity-list-title  p{
+  display: block;
+  width: 299.75px;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 5px;
+  box-sizing:border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.commodity-list-price span{
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+}
+.commodity-list-price span:first-child{
+  padding: 0 5px;
+  font-size: 20px;
+  color: #ff649d;
+}
+.commodity-list-school p{
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 8px;
+  box-sizing:border-box;
+  font-size: 16px;
+}
+.commodity-list-school span{
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  color: #f60;
+  vertical-align: top;
+  padding: 0 5px;
+}
+.commodity-list-user{
+  width: 100%;
+  height: 49px;
+  padding-left: 5px;
+  padding-top: 4.5px;
+  box-sizing:border-box;
+}
+.commodity-list-user div{
+  height: 40px;
+  line-height: 40px;
+}
+.commodity-list-user-head{
+  width: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  float: left;
+}
+.commodity-list-user-head > img{
+  max-width: 40px;
+  max-height: 40px;
+}
+.commodity-list-user-nickname{
+  padding: 0 5px;
+  float: left;
+}
+.commodity-list-user-data{
+  padding: 0 5px;
+  float: right;
+}
+/* loading */
+.loading{
+	width: 1198px;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+.loading > img{
+	width: 400px;
+}
+/* loading */

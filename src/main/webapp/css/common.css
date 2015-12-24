@@ -1,0 +1,222 @@
+/* ---------common---------- */
+       *{
+       	margin: 0px;
+       	padding: 0px;
+       }
+       body{ 
+       	font-family: 'Microsoft Yahei',Helvetica,Arial; 
+       	font-size: 14px; 
+       	color: #666;
+       	width: 100%;
+        min-width:1200px;
+       	height: 100%;
+       }
+       img{
+        border: none;
+       }
+       .top-warp ul,li{
+       	list-style: none;
+       }
+       .top-warp li{
+       	display: inline-block;
+       }
+       a{
+       	text-decoration: none;
+       	color: #666;
+        display: inline-block;
+       }
+       /* ----------top------------ */
+       .top-warp-top{
+       	width: 100%;
+       	height: 22px;
+       	line-height: 22px;
+       	background: #F5F5F5;
+       	padding: 4px 0;
+       }
+       .top-warp-top li{
+       	width: 50%;
+       }
+       #top-warp-top-right span:first-child{
+       	border-right: 1px solid #A177A1;
+       	margin-left: 100px;
+       }
+       #top-warp-top-right span{
+        display: inline-block;
+        width: 40px;
+        text-align: center;
+        cursor: pointer;
+       }
+       #top-warp-top-right span:hover{
+       	text-decoration: underline;
+       }
+       /*----------center-------- */
+       .top-warp-center{
+        width:1200px;
+        margin:0 auto;
+       	text-align: center;
+       }
+       .top-warp-center li{
+       	height: 80px;
+       	/* line-height: 80px; */
+       	vertical-align: top;
+       }
+       .top-warp-center div{
+        display: inline-block;
+       }
+       .top-warp-center-left{
+        width:30%;
+       	text-align: left;
+       	line-height: 80px;
+       }
+       .top-warp-center-left img{
+       	margin-top: 5px;
+       }
+       #logo{
+        width: ;
+        width: 110px;
+       	height: 70px;
+       }
+       #slogan{
+       	width: 200px;
+       	height: 70px;
+       }
+       .top-warp-center-center{
+        width:40%;
+        text-align:center;
+       }
+       .top-warp-center-center div{
+       	margin-top:20px; 
+       }
+       #key{
+        width:380px;
+        height:36px;
+        outline: none;
+        border-left: 2px solid #FF649D;
+        border-top: 2px solid #FF649D;
+        border-bottom: 2px solid #FF649D;
+        border-right: none;
+        font-size: 16px;
+        padding-left: 5px;
+       }
+       #search{
+        display: inline-block;
+        border: none;
+        width: 80px;
+        height:40px;
+        line-height:40px;
+        background: #ff649d;
+        font-size: 14px;
+        color: #fff;
+        font-weight: bold;
+       }
+       .top-warp-center-right{
+        width:30%;
+       	text-align: center;
+       	line-height: 80px;
+       }
+       .top-warp-center-right div{
+       	background: #F5F5F5; 
+       	height: 40px;
+       	line-height: 40px;
+       	text-align: center;
+       	width: 80px;
+       	border-radius: 2px;
+       	box-shadow: 0 0 2px rgba();
+       }
+       /* ------------top nav bottom---------- */
+       .top-warp-bottom{
+       	width: 1200px;
+       	height: 44px;
+       	line-height: 44px;
+       	/* background: #EBA3D8; */
+       	/*background: #FF649D;*/
+       	text-align: center;
+        margin: 20px auto 0px auto;
+        cursor: pointer;
+       }
+       .all-sort-warp{
+        position: relative;
+        width: 240px;
+       }
+       .all-sort-warp ul{
+        position: absolute;
+        width: 240px;
+        top: 0px;
+        left: 0px;
+        z-index: 10;
+       }
+       .all-sort-warp ul>li{
+        width: 240px;
+        height: 44px;
+        background: rgba(0,0, 0, .8);
+        vertical-align: top;
+        font-size: 16px;
+        font-weight: bolder;
+       }
+       #sort-first{
+         background: #FF649D;
+         color: #fff;
+         text-align: center;
+       }
+       .nav-items{
+        margin-left: 240px;
+        width: 960px;
+        height: 44px;
+        text-align: left;
+       }
+       .nav-items li{
+        width: 110px;
+        text-align: center;
+        font-size: 16px;
+        vertical-align: top;
+        font-weight: bolder;
+       }
+     
+   /* ------talker bottom----- */
+   .bottom-warp{
+    width: 100%;
+    height: 180px;
+    background: #FDFBFE;
+    margin-top: 50px;
+    border-top: 1px solid #EEEEEE;
+    clear: both;
+   }
+   .bottom-warp ul{
+    margin: 30px auto 0px auto;
+    height: 150px;
+    width: 1200px;
+   }
+   .bottom-warp li{
+    height: 130px;
+    float: left;
+   }
+   li.li35{
+    width: 27.5%;
+   }
+   li.li10{
+    width: 15%;
+   }
+   .bottom-warp h3{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px dashed #ddd;
+   }
+   .bottom-warp li p:not(.me){
+    height: 25px;
+    line-height: 25px;
+   }
+   p.say{
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bolder;
+   }
+   p.author{
+    text-align: right;
+    font-size: 16px;
+   }
+   /* 澧炲姞瀵艰埅杈规鍜屽垎绫婚殣钘�*/
+   .list-top-special{
+      overflow: hidden;
+      border-bottom: 2px solid #ff649d;
+    }

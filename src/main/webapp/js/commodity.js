@@ -1,0 +1,49 @@
+$(function(){
+	//上架事件
+	$('.up').bind('click',function(){
+		del("1",this);
+	});
+	//下架事件
+	$('.down').bind('click',function(){
+		del("2",this);
+	});
+	//删除事件
+	$('.del').bind('click',function(){
+		del("3",this);
+	});
+});
+
+function del(status,obj){
+	$.ajax({
+		type:'post',
+		url:'/talker/commodity/del',
+		data:'status='+status+'&id='+$(obj).attr('id'),
+		dataType:'json',
+		success:function(data){
+			initTip(data.message);
+		},
+		error:function(){
+			initTip("哎呀，出错啦");
+		}
+	});
+}
+//统一提示
+function initTip(message){
+	//设置提示信息
+	$('.tip-content').html(message);
+	//in
+	$('.tip').css({
+		'left':($(window).width()-$('.tip').width())/2
+	}).animate({
+		top:'0px'
+	},500);
+	$('.tip-mask').fadeIn("slow");
+	//out
+	$('.confirm button').bind('click',function(){
+		$('.tip').animate({
+			top:'-140px'
+		},300);
+		$('.tip-mask').fadeOut("slow");
+		window.location.reload();
+	});
+}
