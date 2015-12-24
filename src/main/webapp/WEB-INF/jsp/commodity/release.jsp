@@ -133,8 +133,8 @@
                <label for="cellnumber">
                 	 联系方式
                </label>
-               <input type="text" id="cellnumber" name="cellnumber">
-               <span class="inputTip">请输入联系方式</span>
+               <input type="text" id="cellnumber" name="cellnumber" maxlength="11">
+               <span class="inputTip">请输入11位联系方式</span>
              </li>
              <li>
                <label for="callname">

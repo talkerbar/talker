@@ -1,4 +1,4 @@
-package com.talker.dataManage.service;
+package com.talker.dataManage.service.impl;
 
 import java.util.Date;
 
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.talker.dataManage.dao.VisitDao;
 import com.talker.dataManage.pojo.Visits;
+import com.talker.dataManage.service.VisitService;
 
 /**  
  * 创建时间 : 2015-12-24 下午2:18:16

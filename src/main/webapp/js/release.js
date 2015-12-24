@@ -48,11 +48,15 @@ $(function() {
     		$('#newprice').addClass('errorinput').siblings('.inputTip').show();
     		flag = false;
     	}
-    	var oldprice = $('#oldprice').val();
     	var cellnumber = $('#cellnumber').val();
     	if(cellnumber==''){
     		$('#cellnumber').addClass('errorinput').siblings('.inputTip').show();
     		flag = false;
+    	}else{
+    		if(cellnumber.length!=11){
+    			$('#cellnumber').addClass('errorinput').siblings('.inputTip').show();
+        		flag = false;
+    		}
     	}
     	var callname = $('#callname').val();
     	if(callname==''){
