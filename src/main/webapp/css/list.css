@@ -2,7 +2,7 @@
   display: inline-block;
   vertical-align: top;
 }
-/* Ñ§Ð£ºÍ·ÖÀà */
+/* Ñ§Ð£ï¿½Í·ï¿½ï¿½ï¿½ */
 .warp-school-sort{
    width: 1200px;
    border: 1px solid #ddd;
@@ -41,7 +41,7 @@
   border-left: 1px solid #ddd;
 }
 
-/* ÅÅÐò */
+/* ï¿½ï¿½ï¿½ï¿½ */
 .warp-sequence{
   width: 1200px;
   margin: 10px auto 0px auto;
@@ -49,7 +49,7 @@
   line-height: 32px;
 }
 .warp-sequence-left{
-  height: 30px;
+  height: 32px;
   float: left;
 }
 .warp-sequence-left li{
@@ -61,7 +61,7 @@
   cursor: pointer;
 }
 .warp-sequence-right{
-  height: 30px;
+  height: 32px;
   float: right;
 }
 .warp-sequence-left li:not(.current):hover{
@@ -74,7 +74,7 @@ li.current{
   color: #fff;
 }
 
-/* ÉÌÆ·ÁÐ±í */
+/* ï¿½ï¿½Æ·ï¿½Ð±ï¿½ */
 .warp-commodity{
   width: 1200px;
   box-sizing:border-box;
