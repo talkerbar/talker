@@ -29,7 +29,7 @@ public class Poi implements Serializable{
 	private String address;
 	private String longitude;
 	private String latitude;
-	private Integer school_id;
+	private String school_id;
 	public String getGeotable_id() {
 		return geotable_id;
 	}
@@ -60,10 +60,10 @@ public class Poi implements Serializable{
 	public void setLatitude(String latitude) {
 		this.latitude = latitude;
 	}
-	public Integer getSchool_id() {
+	public String getSchool_id() {
 		return school_id;
 	}
-	public void setSchool_id(Integer school_id) {
+	public void setSchool_id(String school_id) {
 		this.school_id = school_id;
 	}
 	

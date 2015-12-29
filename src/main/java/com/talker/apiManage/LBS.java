@@ -34,7 +34,7 @@ public class LBS {
 			params.put("address", poi.getAddress());
 			params.put("longitude", poi.getLongitude());
 			params.put("latitude", poi.getLatitude());
-			params.put("school_id", poi.getSchool_id()+"");
+			params.put("school_id", poi.getSchool_id());
 			//POST请求
 			JSONObject result = HttpRequestUtil.postHttp(APIConfig.getCreatePoi(), params);
 			if (result!=null) {
@@ -50,14 +50,16 @@ public class LBS {
 	}
 	
 	public static void main(String[] args) {
+		
 		Poi poi = new Poi();
-		poi.setSchool_name("北京师范大学");
-		poi.setAddress("北京市新街口外大街19号");
-		poi.setLongitude("116.37377");
-		poi.setLatitude("39.967216");
-		poi.setSchool_id(1);
+		poi.setSchool_name("周口师范学院");
+		poi.setAddress("文昌路东段");
+		poi.setLongitude("114.689634");
+		poi.setLatitude("33.640847");
+		poi.setSchool_id("2");
 		JSONObject result = createLbsPoi(poi);
 		System.out.println(result);
+		
 	}
 
 }
