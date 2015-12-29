@@ -1,11 +1,11 @@
-/* 商家、商品基本信息开始 */
+/* 锟教家★拷锟斤拷品锟斤拷锟斤拷息锟斤拷始 */
 .warp-commodity{
 	width: 1198px;
 	height: 518px;
 	margin: 20px auto 0px auto;
 	border: 1px solid #ddd;
 }
-/* 商家基本信息 */
+/* 锟教家伙拷锟斤拷息 */
 .warp-shop-detail{
 	width: 100%;
 	height: 59px;
@@ -30,8 +30,11 @@
 	font-size: 16px;
 	height: 25px;
 	line-height: 25px;
+	white-space:nowrap; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
 }
-/* 商品基本信息 */
+/* 锟斤拷品锟斤拷锟斤拷息 */
 .warp-commodity-detail{
 	width: 100%;
 	height: 458px;
@@ -88,7 +91,7 @@
 	max-width: 130px;
 	max-height: 70.6px;
 }
-/* 商品描述 */
+/* 锟斤拷品锟斤拷锟斤拷 */
 .detail-desc{
 	width: 594px;
 }
@@ -134,7 +137,7 @@ b{
 	border-radius: 5px;
 	cursor: pointer;
 }
-/* 商品附加信息 */
+/* 锟斤拷品锟斤拷锟斤拷锟斤拷息 */
 .warp-nav-main{
 	width: 1200px;
 	margin: 20px auto 0px auto;
@@ -199,7 +202,7 @@ i.bor{
 	font-size: 18px;
 	padding-left: 30px;
 }
-/* 留言样式 */
+/* 锟斤拷锟斤拷锟斤拷式 */
 .message-post{
 	width:80%;
 	margin: 20px auto;
@@ -299,7 +302,7 @@ span.num-big{
 .record-content-tip{
 	color: #f00;
 }
-/* 登陆 */
+/* 锟斤拷陆 */
 .content{
 	width: 390px;
 	height: 405px;
@@ -399,7 +402,7 @@ span.num-big{
 .icon-password{
 	background: url("../images/icon/icon.png") 0px -25px no-repeat;
 }
-/* 统一提示 */
+/* 统一锟斤拷示 */
 .tip{
 	width: 300px;
 	height: 140px;
@@ -447,4 +450,4 @@ span.num-big{
 	opacity:.2;
 	display: none;
 }
-/* 统一提示 */
+/* 统一锟斤拷示 */

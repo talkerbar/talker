@@ -8,7 +8,7 @@
   	<script src="/talker/js/jquery.min.js"></script>
   	<script src="/talker/js/list.js"></script>
     <link rel="stylesheet" href="/talker/css/common.css">
-    <link rel="stylesheet" href="/talker/css/list.css">
+    <link rel="stylesheet" href="/talker/css/list.css?v=1.0">
   </head>
   <body>
   	<!-- Top Begin -->
@@ -98,7 +98,6 @@
          </ul>
       </div>
       <div class="warp-sequence-right">
-        
       </div>
     </div>
     <!-- 排序结束 -->
