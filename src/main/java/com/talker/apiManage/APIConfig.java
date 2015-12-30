@@ -16,7 +16,7 @@ public class APIConfig {
 	/**
 	 * geotable_id
 	 */
-	public static final String geotable_id = "130352";
+	public static final String geotable_id = "130426";
 	/**
 	 * 创建数据（create poi）接口
 	 */
