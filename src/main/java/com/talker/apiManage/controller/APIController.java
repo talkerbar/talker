@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.talker.apiManage.APIConfig;
 import com.talker.apiManage.LBS;
 import com.talker.apiManage.pojo.Poi;
 import com.talker.sortManage.pojo.Sort;
@@ -37,6 +38,13 @@ public class APIController {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
+	/**
+	 * 方法名: createLBSPoi
+	 * 说明 :  根据数据库地区-->从百度地图拉取数据-->存向LBS
+	 * 创建人 :   zdd       
+	 * 创建时间 : 2015-12-30 下午2:19:01 
+	 * 返回值  : void
+	 */
 	@RequestMapping("create")
 	@ResponseBody
 	public void createLBSPoi(){
@@ -99,6 +107,13 @@ public class APIController {
 			}
 		}
 		System.out.println("----------:"+total_num);
+	}
+	
+	@RequestMapping("createSchool")
+	@ResponseBody
+	public void createSchoolToMySql(){
+		String sql = "http://api.map.baidu.com/geodata/v3/poi/list?geotable_id="+APIConfig.getGeotableId()+"&ak=nqkA8pQ0wGuWyU9L36cIj3kG&page_size=200";
+		JSONObject result = HttpRequestUtil.get(sql);
 	}
 
 }
