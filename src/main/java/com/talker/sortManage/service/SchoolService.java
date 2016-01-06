@@ -1,21 +1,22 @@
-package com.talker.sortManage.dao;
+package com.talker.sortManage.service;
 
 import java.util.List;
 
 import com.talker.sortManage.pojo.SortParams;
 
 /**  
- * 创建时间 : 2015-12-30 下午4:04:27
+ * 创建时间 : 2016-1-6 下午8:08:26
  * 项目名称 : talker  
  * 创建人 : zdd
- * 文件名称 ：SchoolDao.java  
+ * 文件名称 ：SchoolService.java  
  * 说明 :  TODO
  * 修改时间:
  * 修改人 :
  * 修改原因 : 
  */
 
-public interface SchoolDao {
+public interface SchoolService {
+	
 	/**
 	 * 方法名: getSchool
 	 * 说明 :  根据条件查询学校

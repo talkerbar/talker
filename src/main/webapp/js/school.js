@@ -27,7 +27,7 @@ function getprovince(){
 				}
 			}
 			$('.warp_province > ul').html(htm);
-			getSchool('410000')
+			getSchool('河南省');
 			$('.warp_province li').bind('click',function(){
 				$('.warp_province li').removeClass();
 				$(this).addClass('schoolCurrent');
@@ -40,11 +40,11 @@ function getprovince(){
 	});
 }
 //得到省所在的学校
-function getSchool(id){
+function getSchool(province){
 	$.ajax({
 		type:'post',
 		url:'/talker/school/get',
-		data:'parentid='+id,
+		data:'province='+province,
 		dataType:'json',
 		success:function(data){
 			var htm = '';

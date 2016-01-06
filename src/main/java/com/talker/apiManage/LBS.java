@@ -50,15 +50,15 @@ public class LBS {
 	}
 	
 	public static void main(String[] args) {
-//		Poi poi = new Poi();
-//		poi.setSchool_name("河南科技学院新科学院");
-//		poi.setAddress("河南省新乡市洪门镇华兰大道东段");
-//		poi.setLongitude("113.940342");
-//		poi.setLatitude("35.287724");
-//		poi.setSchool_id("baf627f6c2bf9cf4a8059d8c");
-//		System.out.println(LBS.createLbsPoi(poi));
-		String sql = "http://api.map.baidu.com/geodata/v3/poi/list?geotable_id="+APIConfig.getGeotableId()+"&ak=nqkA8pQ0wGuWyU9L36cIj3kG&page_size=200&city=周口市";
-		System.out.println(HttpRequestUtil.get(sql));
+		Poi poi = new Poi();
+		poi.setSchool_name("郑州轻工业学院");
+		poi.setAddress("河南省郑州市中原区枫香街");
+		poi.setLongitude("113.515832");
+		poi.setLatitude("34.817152");
+		poi.setSchool_id("13");
+		System.out.println(LBS.createLbsPoi(poi));
+//		String sql = "http://api.map.baidu.com/geodata/v3/poi/list?geotable_id="+APIConfig.getGeotableId()+"&ak=nqkA8pQ0wGuWyU9L36cIj3kG&page_size=200&city=周口市";
+//		System.out.println(HttpRequestUtil.get(sql));
 	}
 
 }

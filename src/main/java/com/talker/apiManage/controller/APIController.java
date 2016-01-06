@@ -1,8 +1,6 @@
 package com.talker.apiManage.controller;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
@@ -17,7 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.talker.apiManage.APIConfig;
 import com.talker.apiManage.LBS;
 import com.talker.apiManage.pojo.Poi;
-import com.talker.sortManage.pojo.Sort;
+import com.talker.apiManage.pojo.Temp;
+import com.talker.sortManage.pojo.SortParams;
 import com.talker.util.HttpRequestUtil;
 
 /**  
@@ -48,72 +47,38 @@ public class APIController {
 	@RequestMapping("create")
 	@ResponseBody
 	public void createLBSPoi(){
-		
-		String sql = "SELECT * from area t where t.parentid = 410000";
-		List<Sort> listArea = jdbcTemplate.query(sql, new BeanPropertyRowMapper<Sort>(Sort.class));
-		Map<String, String> params = new HashMap<String, String>();
-		int total_num = 0;
-		for (Sort sort : listArea) {
-			String url = "http://api.map.baidu.com/place/v2/search?ak=nqkA8pQ0wGuWyU9L36cIj3kG&output=json&query=大学&page_size=10&page_num=0&scope=1&region="+sort.getName();
-			JSONObject result = HttpRequestUtil.postHttp(url, params);
-			if(result!=null && result.getString("message").equals("ok")){
-				JSONArray dataArray = result.getJSONArray("results");
-				for (int i = 0; i < dataArray.size(); i++) {
-					Poi poi = new Poi();
-					if(dataArray.getJSONObject(i).containsKey("name"))
-						poi.setSchool_name(dataArray.getJSONObject(i).getString("name"));
-					if(dataArray.getJSONObject(i).containsKey("address"))
-						poi.setAddress(dataArray.getJSONObject(i).getString("address"));
-					if(dataArray.getJSONObject(i).containsKey("location")){
-						poi.setLongitude(dataArray.getJSONObject(i).getJSONObject("location").getString("lng"));
-						poi.setLatitude(dataArray.getJSONObject(i).getJSONObject("location").getString("lat"));
-						if(dataArray.getJSONObject(i).containsKey("uid"))
-							poi.setSchool_id(dataArray.getJSONObject(i).getString("uid"));
-						System.out.println(LBS.createLbsPoi(poi));
-						total_num++;
-					}else{
-						System.out.println(sort.getName()+" 无经纬度");
-					}
-				}
-				int total = result.getInt("total");
-				int num = total/20;
-				int nums = total%20;
-				if(nums!=0)
-					num++;
-				for (int i = 0; i < num; i++) {
-					String url_ = "http://api.map.baidu.com/place/v2/search?ak=nqkA8pQ0wGuWyU9L36cIj3kG&output=json&query=大学&page_size=20&page_num="+(i+1)+"&scope=1&region="+sort.getName();
-					JSONObject result_ = HttpRequestUtil.postHttp(url_, params);
-					if(result_!=null && result_.getString("message").equals("ok")){
-						JSONArray dataArray_ = result_.getJSONArray("results");
-						for (int y = 0; y < dataArray_.size(); y++) {
-							Poi poi = new Poi();
-							if(dataArray_.getJSONObject(y).containsKey("name"))
-								poi.setSchool_name(dataArray_.getJSONObject(y).getString("name"));
-							if(dataArray_.getJSONObject(y).containsKey("address"))
-								poi.setAddress(dataArray_.getJSONObject(y).getString("address"));
-							if(dataArray_.getJSONObject(y).containsKey("location")){
-								poi.setLongitude(dataArray_.getJSONObject(y).getJSONObject("location").getString("lng"));
-								poi.setLatitude(dataArray_.getJSONObject(y).getJSONObject("location").getString("lat"));
-								if(dataArray_.getJSONObject(y).containsKey("uid"))
-									poi.setSchool_id(dataArray_.getJSONObject(y).getString("uid"));
-								System.out.println(LBS.createLbsPoi(poi));
-								total_num++;
-							}else{
-								System.out.println(sort.getName()+" 无经纬度");
-							}
-						}
-					}
-				}
-			}
+		String sql = "select * from temp";
+		List<Temp> temp =  jdbcTemplate.query(sql, new BeanPropertyRowMapper<Temp>(Temp.class));
+		for (Temp temp2 : temp) {
+			Poi poi = new Poi();
+			poi.setSchool_name(temp2.getTitle());
+			poi.setAddress(temp2.getAddress());
+			poi.setLongitude(temp2.getLng());
+			poi.setLatitude(temp2.getLat());
+			poi.setSchool_id(temp2.getId()+"");
+			System.out.println(LBS.createLbsPoi(poi));
 		}
-		System.out.println("----------:"+total_num);
 	}
 	
 	@RequestMapping("createSchool")
 	@ResponseBody
 	public void createSchoolToMySql(){
+		String createSql = "insert into school(id,name,province,city,district) values(?,?,?,?,?)";
 		String sql = "http://api.map.baidu.com/geodata/v3/poi/list?geotable_id="+APIConfig.getGeotableId()+"&ak=nqkA8pQ0wGuWyU9L36cIj3kG&page_size=200";
 		JSONObject result = HttpRequestUtil.get(sql);
+		JSONArray jsonArray = result.getJSONArray("pois");
+		for (int i = 0; i < jsonArray.size(); i++) {
+			JSONObject jsonObject = jsonArray.getJSONObject(i);
+			SortParams sortParams = new SortParams();
+			sortParams.setId(Integer.parseInt(jsonObject.getString("school_id")));
+			sortParams.setName(jsonObject.getString("title"));
+			sortParams.setProvince(jsonObject.getString("province"));
+			sortParams.setCity(jsonObject.getString("city"));
+			sortParams.setDistrict(jsonObject.getString("district"));
+			Object[] parmas = {sortParams.getId(),sortParams.getName(),sortParams.getProvince(),sortParams.getCity(),sortParams.getDistrict()};
+			int result_i = jdbcTemplate.update(createSql, parmas);
+			System.out.println(result_i);
+		}
 	}
 
 }
