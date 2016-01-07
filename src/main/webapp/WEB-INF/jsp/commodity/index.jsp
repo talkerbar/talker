@@ -9,6 +9,7 @@
 	<script src="/talker/js/swiper.js"></script>
 	<script src="/talker/js/index.js"></script>
   	<link rel="stylesheet" href="/talker/css/index.css">
+  	<link rel="stylesheet" href="/talker/css/common.css">
   	<link rel="stylesheet" href="/talker/css/swiper.css">
 </head>
 <body>

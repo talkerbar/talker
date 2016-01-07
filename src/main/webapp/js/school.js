@@ -15,23 +15,23 @@ function getprovince(){
 	$.ajax({
 		type:'post',
 		url:'/talker/area/get',
-		data:'parentid=1',
+		data:'parentid=410000',
 		dataType:'json',
 		success:function(data){
 			var htm = '';
 			for ( var int = 0; int < data.length; int++) {
-				if(data[int].id=='410000'){
+				if(data[int].id=='410100'){
 					htm += '<li class="schoolCurrent" data="'+data[int].id+'">'+data[int].name+'</li>';
 				}else{
 					htm += '<li data="'+data[int].id+'">'+data[int].name+'</li>';
 				}
 			}
 			$('.warp_province > ul').html(htm);
-			getSchool('河南省');
+			getSchool('郑州市');
 			$('.warp_province li').bind('click',function(){
 				$('.warp_province li').removeClass();
 				$(this).addClass('schoolCurrent');
-				getSchool($(this).attr('data'));
+				getSchool($(this).text());
 			});
 		},
 		error:function(){
@@ -40,11 +40,11 @@ function getprovince(){
 	});
 }
 //得到省所在的学校
-function getSchool(province){
+function getSchool(city){
 	$.ajax({
 		type:'post',
 		url:'/talker/school/get',
-		data:'province='+province,
+		data:'city='+city,
 		dataType:'json',
 		success:function(data){
 			var htm = '';
