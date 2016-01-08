@@ -8,7 +8,8 @@ function convertImgToBase64Commodity(url, callback, outputFormat) {
 		var width = img.width;
 		var height = img.height;
 		// 压缩比例
-		var rate = (width < height ? width / height : height / width);
+		var max = 1500;
+		var rate = (width < height ? (height>max?max/height:height/max):(width>max?max/width:width/max));
 		canvas.width = width * rate;
 		canvas.height = height * rate;
 		ctx.drawImage(img, 0, 0, width, height, 0, 0, width * rate, height
@@ -35,8 +36,6 @@ $(function(){
 	$('#image').bind('change', function(event) {
 		var imageUrl = getObjectURL($(this)[0].files[0]);
 		convertImgToBase64Commodity(imageUrl, function(base64Img) {
-			/*$('#img').attr('src', base64Img);
-			$('#base64').val(base64Img.split(",")[1]);*/
 			var index4img = $('#index4img').val();
 			index4img++;
 			var htm = 
@@ -60,5 +59,4 @@ $(function(){
 		event.preventDefault();
 	});
 })
-
 /* 2015-09-28 */
