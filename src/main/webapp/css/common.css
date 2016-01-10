@@ -41,6 +41,8 @@ a {
 
 .top-warp-top li {
 	width: 50%;
+	height: 22px;
+	float: left;
 }
 
 #top-warp-top-right span:first-child {
@@ -167,16 +169,15 @@ a {
 	top: 0px;
 	left: 0px;
 	z-index: 10;
+	background: rgba(0, 0, 0, .6);
+	color: #fff;
 }
 
 .all-sort-warp ul>li {
 	width: 240px;
 	height: 44px;
-	background: rgba(0, 0, 0, .8);
 	vertical-align: top;
 	font-size: 16px;
-	font-weight: bold;
-	color: #fff;
 }
 
 .all-sort-warp ul>li:not(:first-child){
@@ -184,6 +185,10 @@ a {
 	box-sizing: border-box;
 	padding-left: 20px;
 	font-size: 15px;
+}
+
+.all-sort-warp ul>li:not(:first-child):hover{
+	background:rgba(0,0,0,0.6);
 }
 
 #sort-first {

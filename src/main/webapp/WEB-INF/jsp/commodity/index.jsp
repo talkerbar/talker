@@ -17,8 +17,8 @@
 	<div class="top-warp">
 		<div class="top-warp-top">
 			<ul>
-				<li id="top-warp-top-left"></li><!--
-			 --><li id="top-warp-top-right"><span><a href="/talker/login">登陆</a></span><span>注册</span></li>
+				<li id="top-warp-top-left"></li>
+			 	<li id="top-warp-top-right"><span><a href="/talker/login">登陆</a></span><span>注册</span></li>
 			</ul>
 		</div>
 		<div class="top-warp-center">
@@ -53,13 +53,9 @@
 	         </div>
 	         <div class="nav-items">
 	              <ul>
-	                <li>校内淘</li>
-	                <li>隔壁淘</li>
-	                <li>同城淘</li>
-	                <li>有人代购</li>
-	                <li>一起回家</li>
-	                <li>零花钱</li>
-	                <li>我是学霸</li>
+	                <li>首页</li>
+	                <li>我要买</li>
+	                <li>我要卖</li>
 	              </ul>
 	         </div>
 		</div>
