@@ -43,28 +43,24 @@
   			 </ul>
   		</div>
   		<div class="top-warp-bottom list-top-special">
-    			 <div class="all-sort-warp">
-              <ul>
-                <li id="sort-first">全部商品分类</li>
-                <li>闲置数码</li>
-                <li>闲置母婴</li>
-                <li>家居日常</li>
-                <li>影音家电</li>
-                <li>鞋服配饰</li>
-                <li>珠宝收藏</li>
-              </ul>   
-           </div>
-           <div class="nav-items">
-                <ul>
-                  <li>校内淘</li>
-                  <li>隔壁淘</li>
-                  <li>同城淘</li>
-                  <li>有人代购</li>
-                  <li>一起回家</li>
-                  <li>零花钱</li>
-                  <li>我是学霸</li>
-                </ul>
-           </div>
+		   <div class="all-sort-warp">
+	            <ul>
+	              <li id="sort-first">全部商品分类</li>
+	              <li>手机/电脑/电脑配件</li>
+	              <li>摩托车/电动车/自行车</li>
+	              <li>数码3C产品</li>
+	              <li>书籍/文体用品</li>
+	              <li>箱包配饰</li>
+	              <li>生活服务</li>
+	            </ul>   
+	         </div>
+	         <div class="nav-items">
+	              <ul>
+	                <li>首页</li>
+	                <li>我要买</li>
+	                <li>我要卖</li>
+	              </ul>
+	         </div>
   		</div>
   	</div>
   	<!-- Top End -->
