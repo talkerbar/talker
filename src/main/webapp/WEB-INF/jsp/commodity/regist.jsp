@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>会员登录-大学生生活服务平台</title>
+<title>会员注册-大学生生活服务平台</title>
   	<script src="/talker/js/jquery.min.js"></script>
     <script src="/talker/js/login.js"></script>
     <link rel="stylesheet" href="/talker/css/login.css">
@@ -25,25 +25,27 @@
 				<div class="content">
 					<ul>
 						<li class="desc">
-							<span>登录</span>
 							<span>免费注册</span>
+							<span>登录</span>
 						</li>
-						<li class="username info">
+						<li class="regist info">
 							<span class="icon-username icon"></span>
 							<input type="tel" name="username" id="username" maxlength="11" placeholder="手机号"/>
 						</li>
-						<li class="password info">
+						<li class="regist security_code">
+							<input type="tel" name="username" id="username" maxlength="6" placeholder="验证码"/>
+							<span id="code">获取验证码</span>
+						</li>
+						<li class="regist info">
 							<span class="icon-password icon"></span>
 							<input type="password" name="password" id="password" placeholder="6-18位密码"/>
 						</li>
-						<li class="help">
-							<a href="">忘记密码？</a>
+						<li class="regist info">
+							<span class="icon-password icon"></span>
+							<input type="password" name="password" id="password" placeholder="再次输入密码"/>
 						</li>
-						<li class="confirm-login">
-							<button class="submit">登陆</button>
-						</li>
-						<li class="other">
-							
+						<li class="confirm-regist">
+							<button class="submit">免费注册</button>
 						</li>
 					</ul>
 				</div>

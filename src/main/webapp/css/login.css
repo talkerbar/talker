@@ -102,7 +102,7 @@ ul,li{
 	line-height: 100px;
 	border-bottom: 1px dashed #ddd;
 }
-.confirm-login button{
+.submit{
 	width: 100%;
 	height: 44px;
 	outline: none;
@@ -129,6 +129,37 @@ ul,li{
 .icon-password{
 	background: url("../images/icon/icon.png") 0px -25px no-repeat;
 }
+/* resist */
+.regist{
+	margin-bottom: 15px;
+}
+.confirm-regist{
+	height: 80px;
+	line-height: 80px;
+}
+.security_code > input{
+	width: 100px;
+	height: 44px;
+	outline: none;
+	border:1px solid #ddd;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 18px;
+	padding-left: 10px;
+}
+#code{
+	display:inline-block;
+	width: 120px;
+	text-align: center;
+	float: right;
+	height: 40px;
+	line-height:40px;
+	margin-top: 2px;
+	background: #ddd;
+	cursor: pointer;
+}
+/* resist */
 /* foot */
 .warp-login-foot{
 	margin-top: 30px;

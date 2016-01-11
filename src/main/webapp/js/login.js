@@ -1,5 +1,5 @@
 $(function(){
-	$('.confirm-login button').bind('click',function(){
+	$('.submit').bind('click',function(){
 		var _this = this;
 		disabled(this);
 		var username = $('#username').val();

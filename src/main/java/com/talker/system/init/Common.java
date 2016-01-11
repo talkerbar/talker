@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.talker.commodityManage.pojo.Commodity;
 import com.talker.commodityManage.service.CommodityService;
 import com.talker.system.controller.AbstractController;
+import com.talker.util.SystemString;
 
 @Controller
 @RequestMapping(value="/")
@@ -52,10 +53,15 @@ public class Common extends AbstractController{
 			}
 		}else{
 			//没有参数的返回主页面
-			returnUrl = "http://localhost/talker";
+			returnUrl = SystemString.URL+"talker";
 		}
 		m.addAttribute("returnUrl", returnUrl);
 		return "commodity/login";
+	}
+	// 注册
+	@RequestMapping("regist")
+	public String resist(){
+		return "commodity/regist";
 	}
 
 }
