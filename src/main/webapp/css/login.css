@@ -158,6 +158,9 @@ ul,li{
 	margin-top: 2px;
 	background: #ddd;
 	cursor: pointer;
+	border: none;
+	outline: none;
+	color: #666;
 }
 /* resist */
 /* foot */

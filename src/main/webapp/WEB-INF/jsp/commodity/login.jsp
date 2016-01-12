@@ -40,7 +40,7 @@
 							<a href="">忘记密码？</a>
 						</li>
 						<li class="confirm-login">
-							<button class="submit">登陆</button>
+							<button class="submit login">登陆</button>
 						</li>
 						<li class="other">
 							

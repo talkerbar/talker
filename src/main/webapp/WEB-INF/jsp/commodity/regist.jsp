@@ -30,11 +30,11 @@
 						</li>
 						<li class="regist info">
 							<span class="icon-username icon"></span>
-							<input type="tel" name="username" id="username" maxlength="11" placeholder="手机号"/>
+							<input type="text" name="username" id="username" maxlength="11" placeholder="手机号"/>
 						</li>
 						<li class="regist security_code">
-							<input type="tel" name="username" id="username" maxlength="6" placeholder="验证码"/>
-							<span id="code">获取验证码</span>
+							<input type="text" name="username" id="username" maxlength="6" placeholder="验证码"/>
+							<button id="code">获取验证码</button>
 						</li>
 						<li class="regist info">
 							<span class="icon-password icon"></span>
@@ -45,7 +45,7 @@
 							<input type="password" name="password" id="password" placeholder="再次输入密码"/>
 						</li>
 						<li class="confirm-regist">
-							<button class="submit">免费注册</button>
+							<button class="submit free_regist">免费注册</button>
 						</li>
 					</ul>
 				</div>
