@@ -18,7 +18,7 @@
 		<div class="top-warp-top">
 			<ul>
 				<li id="top-warp-top-left"></li>
-			 	<li id="top-warp-top-right"><span><a href="/talker/login">登陆</a></span><span>注册</span></li>
+			 	<li id="top-warp-top-right"><span><a href="/talker/login">登陆</a></span><span><a href="/talker/regist">注册</a></span></li>
 			</ul>
 		</div>
 		<div class="top-warp-center">
@@ -34,7 +34,7 @@
         	 </div>
         </li><!--
 			 --><li class="top-warp-center-right">
-			 		<div><a href="/talker/center/commodity?id=1&name=456">个人中心</a></div>
+			 		<div><a href="/talker/center/commodity">个人中心</a></div>
 			 		<div><a href="/talker/center/release">出售商品</a></div>
 			 	</li>
 			 </ul>
