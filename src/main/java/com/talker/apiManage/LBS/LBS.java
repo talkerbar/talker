@@ -1,11 +1,12 @@
-package com.talker.apiManage;
+package com.talker.apiManage.LBS;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import net.sf.json.JSONObject;
 
-import com.talker.apiManage.pojo.Poi;
+import com.talker.apiManage.APIConfig;
+import com.talker.apiManage.LBS.pojo.Poi;
 import com.talker.util.HttpRequestUtil;
 
 /**  

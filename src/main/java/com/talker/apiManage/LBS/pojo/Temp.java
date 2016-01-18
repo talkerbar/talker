@@ -1,4 +1,4 @@
-package com.talker.apiManage.pojo;
+package com.talker.apiManage.LBS.pojo;
 
 import java.io.Serializable;
 
