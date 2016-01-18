@@ -1,4 +1,4 @@
-package com.talker.apiManage;
+package com.talker.apiManage.IP;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -16,7 +16,7 @@ import java.net.URLConnection;
  * 修改原因 : 
  */
 
-public class IpHelp {
+public class IpHelpForTaobao {
 	
 	/**
      * 根据IP获取所在省份

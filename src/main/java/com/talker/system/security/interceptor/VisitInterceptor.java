@@ -8,7 +8,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import com.talker.apiManage.IpHelp;
+import com.talker.apiManage.IP.IpHelpForTaobao;
 import com.talker.dataManage.pojo.PhoneRecords;
 import com.talker.dataManage.pojo.Visits;
 import com.talker.dataManage.service.PhoneRecordsService;
@@ -56,7 +56,7 @@ public class VisitInterceptor extends HandlerInterceptorAdapter {
 			if(cid!=null){
 				Visits visits = new Visits();
 				visits.setIp(getIpAddr(request));
-				visits.setCity(IpHelp.convert(visits.getIp()));
+				visits.setCity(IpHelpForTaobao.convert(visits.getIp()));
 				visits.setcId(Integer.parseInt(cid));
 				boolean result = visitService.addVisit(visits);
 				log.debug("增加商品浏览记录：" + result);
