@@ -1,4 +1,4 @@
-package com.talker.system.cache;
+package com.talker.apiManage.cache;
 
 import java.util.Date;
 

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.talker.system.cache.MemcachedPool;
+import com.talker.apiManage.cache.MemcachedPool;
 import com.talker.system.security.pojo.Menu;
 import com.talker.system.security.service.MenuService;
 import com.talker.system.security.service.impl.HandelMenuAndRight;

@@ -12,7 +12,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import com.talker.system.cache.MemcachedPool;
+import com.talker.apiManage.cache.MemcachedPool;
 import com.talker.system.security.vo.UserSession;
 import com.talker.util.CookieUtil;
 

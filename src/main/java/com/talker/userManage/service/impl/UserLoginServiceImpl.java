@@ -11,7 +11,7 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.talker.system.cache.MemcachedPool;
+import com.talker.apiManage.cache.MemcachedPool;
 import com.talker.system.security.service.impl.HandelMenuAndRight;
 import com.talker.system.security.vo.UserSession;
 import com.talker.userManage.dao.UserLoginDao;
