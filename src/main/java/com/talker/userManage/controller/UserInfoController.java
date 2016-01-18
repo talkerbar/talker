@@ -59,5 +59,10 @@ public class UserInfoController extends AbstractController{
 	public String getIcon(HttpServletRequest request){
 		return userInfoService.getUserIcon(this.getUserId(request));
 	}
+	
+	@RequestMapping(value="completeinfo")
+	public String completeInfo(){
+		return "commodity/completeInfo";
+	}
 
 }
