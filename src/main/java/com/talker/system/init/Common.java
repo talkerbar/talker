@@ -60,7 +60,8 @@ public class Common extends AbstractController{
 	}
 	// 注册
 	@RequestMapping("regist")
-	public String resist(){
+	public String resist(Model m){
+		m.addAttribute("returnUrl", SystemString.URL+"talker/userinfo/completeinfo");
 		return "commodity/regist";
 	}
 

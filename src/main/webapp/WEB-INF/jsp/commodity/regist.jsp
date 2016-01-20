@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>会员注册-大学生生活服务平台</title>
   	<script src="/talker/js/jquery.min.js"></script>
     <script src="/talker/js/login.js"></script>
@@ -33,7 +33,7 @@
 							<input type="text" name="username" id="username" maxlength="11" placeholder="手机号"/>
 						</li>
 						<li class="regist security_code">
-							<input type="text" name="username" id="username" maxlength="6" placeholder="验证码"/>
+							<input type="text" name="security_code" id="security_code" maxlength="6" placeholder="验证码"/>
 							<button id="code">获取验证码</button>
 						</li>
 						<li class="regist info">
@@ -42,7 +42,7 @@
 						</li>
 						<li class="regist info">
 							<span class="icon-password icon"></span>
-							<input type="password" name="password" id="password" placeholder="再次输入密码"/>
+							<input type="password" name="repassword" id="repassword" placeholder="再次输入密码"/>
 						</li>
 						<li class="confirm-regist">
 							<button class="submit free_regist">免费注册</button>

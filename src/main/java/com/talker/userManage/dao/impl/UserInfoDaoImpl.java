@@ -30,9 +30,8 @@ public class UserInfoDaoImpl implements UserInfoDao {
 
 	public boolean addUserInfo(UserInfoParams userInfoParams) {
 		boolean result = false;
-		String sql = "insert into userinfo(gender,schoolid,professionalid,createdate,userloginid) values(?,?,?,?,?)";
-		Object[] params = {userInfoParams.getGender(),userInfoParams.getSchoolid(),userInfoParams.getProfessionalid(),
-				userInfoParams.getCreatedate(),userInfoParams.getUserloginid()};
+		String sql = "insert into userinfo(nickname,telephone,icon,createdate,userloginid) values(?,?,?,?,?)";
+		Object[] params = {userInfoParams.getNickname(),userInfoParams.getTelephone(),userInfoParams.getIcon(),userInfoParams.getCreatedate(),userInfoParams.getUserloginid()};
 		int i = jdbcTemplate.update(sql, params);
 		if(i!=0)
 			result = true;

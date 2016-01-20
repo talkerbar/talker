@@ -1,45 +1,106 @@
 $(function(){
 	//登录事件
 	$('.login').bind('click',function(){
-		var _this = this;
-		disabled(this,"登录中…","#ddd");
-		var username = $('#username').val();
-		var password = $('#password').val();
-		//前端非空判断
-		if(username==''){
-			initTip("请输入手机号");
-			abled(_this,"登录","#ff649d");
-			return false;
-		}
-		if(password==''){
-			initTip("请输入密码");
-			abled(_this,"登录","#ff649d");
-			return false;
-		}
-		$.ajax({
-			type:'post',
-			url:'/talker/userlogin/login',
-			data:{'username':username,'password':password},
-			dataType:'json',
-			success:function(data){
-				if(data.success){
-					window.location.href = $('#returnUrl').val();
-				}else{
-					initTip(data.message)
-				}
-				abled(_this,"登录","#ff649d");
-			},
-			error:function(){
-				initTip("哎呀，出错啦")
-				abled(_this,"登录","#ff649d");
-			}
-		});
+		login(this);
 	});
 	//发送验证码
 	$('#code').bind('click',function(){
 		sendCode(120,this)
 	});
+	//注册事件
+	$('.free_regist').bind('click',function(){
+		regist(this);
+	});
 });
+//登录
+function login(obj){
+	var _this = obj;
+	disabled(this,"登录中…","#ddd");
+	var username = $('#username').val();
+	var password = $('#password').val();
+	//前端非空判断
+	if(username==''){
+		initTip("请输入手机号");
+		abled(_this,"登录","#ff649d");
+		return false;
+	}
+	if(password==''){
+		initTip("请输入密码");
+		abled(_this,"登录","#ff649d");
+		return false;
+	}
+	$.ajax({
+		type:'post',
+		url:'/talker/userlogin/login',
+		data:{'username':username,'password':password},
+		dataType:'json',
+		success:function(data){
+			if(data.success){
+				window.location.href = $('#returnUrl').val();
+			}else{
+				initTip(data.message)
+			}
+			abled(_this,"登录","#ff649d");
+		},
+		error:function(){
+			initTip("哎呀，出错啦")
+			abled(_this,"登录","#ff649d");
+		}
+	});
+}
+//注册
+function regist(obj){
+	var _this = obj;
+	disabled(_this,"注册中…","#ddd");
+	var username = $('#username').val();
+	var security_code = $('#security_code').val();
+	var password = $('#password').val();
+	var repassword = $('#repassword').val();
+	//前端非空判断
+	if(username==''){
+		initTip("请输入手机号");
+		abled(_this,"注册","#ff649d");
+		return false;
+	}
+	if(security_code==''){
+		initTip("请输入验证码");
+		abled(_this,"注册","#ff649d");
+		return false;
+	}
+	if(password==''){
+		initTip("请输入密码");
+		abled(_this,"注册","#ff649d");
+		return false;
+	}
+	if(repassword==''){
+		initTip("请输入重复密码");
+		abled(_this,"注册","#ff649d");
+		return false;
+	}
+	if(password!=repassword){
+		initTip("两次密码不一致");
+		abled(_this,"注册","#ff649d");
+		return false;
+	}
+	$.ajax({
+		type:'post',
+		url:'/talker/userlogin/regist',
+		data:{'username':username,'password':password,'security_code':security_code,'repassword':repassword},
+		dataType:'json',
+		success:function(data){
+			if(data.success){
+				window.location.href = $('#returnUrl').val();
+			}else{
+				initTip(data.message)
+			}
+			abled(_this,"注册","#ff649d");
+		},
+		error:function(){
+			initTip("哎呀，出错啦")
+			abled(_this,"注册","#ff649d");
+		}
+	});
+}
 // 不可用
 function disabled(obj,text,color){
 	//设置按钮不可点击状态
