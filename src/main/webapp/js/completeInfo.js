@@ -33,6 +33,18 @@ function complete(){
 	var schoolid = $('#schoolId').val();
 	var professionalid = $('#professionalId').val();
 	var grade = $('#gradeId').val();
+	if(schoolid==''){
+		initTip("请在下拉框选择学校");
+		return false;
+	}
+	if(professionalid==''){
+		initTip("请在下拉框选择专业");
+		return false;
+	}
+	if(grade==''){
+		initTip("请在下拉框选择年级");
+		return false;
+	}
 	$.ajax({
 		type:'post',
 		url:'/talker/userinfo/complete',
