@@ -77,8 +77,8 @@ public class SortDaoimpl implements SortDao {
 				param.add(sort.getId());
 			}
 			if(sort.getName()!=null&&!"".equals(sort.getName())){
-				sql.append(" and name = ?");
-				param.add(sort.getName());
+				sql.append(" and name like ?");
+				param.add("%"+sort.getName()+"%");
 			}
 			if(sort.getParentid()!=0){
 				sql.append(" and parentid = ?");

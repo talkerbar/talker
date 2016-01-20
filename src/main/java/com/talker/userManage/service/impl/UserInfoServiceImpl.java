@@ -150,4 +150,19 @@ public class UserInfoServiceImpl implements UserInfoService {
 		}
 		return null;
 	}
+
+	public ResponseModel updateUserInfoComplete(UserInfoParams userInfoParams) {
+		boolean success = false;
+		String message = "哎呀，信息完善失败了";
+		if(userInfoParams!=null){
+			boolean result = userInfoDao.updateUserInfoComplete(userInfoParams);
+			if(result){
+				success = true;
+				message = "信息已完善";
+			}else{
+				message = "信息完善途中遇到了问题";
+			}
+		}
+		return ResponseModel.buildMessage(success, message);
+	}
 }

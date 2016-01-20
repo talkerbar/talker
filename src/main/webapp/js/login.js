@@ -15,7 +15,7 @@ $(function(){
 //登录
 function login(obj){
 	var _this = obj;
-	disabled(this,"登录中…","#ddd");
+	disabled(_this,"登录中…","#ddd");
 	var username = $('#username').val();
 	var password = $('#password').val();
 	//前端非空判断

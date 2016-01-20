@@ -36,8 +36,8 @@ public class SchoolDaoImpl implements SchoolDao {
 				params.add(sortParams.getId());
 			}
 			if(sortParams.getName()!=null){
-				sql.append(" and name = ?");
-				params.add(sortParams.getName());
+				sql.append(" and name like ?");
+				params.add("%"+sortParams.getName()+"%");
 			}
 			if(sortParams.getProvince()!=null){
 				sql.append(" and province = ?");

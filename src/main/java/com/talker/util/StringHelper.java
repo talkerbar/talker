@@ -8,4 +8,7 @@ public class StringHelper {
 		UUID onlyId = UUID.randomUUID();
 		return onlyId.toString();
 	}
+	public static StringBuffer removeLast(String str){
+	    return new StringBuffer(str.substring(0, str.length() - 1));
+	}
 }

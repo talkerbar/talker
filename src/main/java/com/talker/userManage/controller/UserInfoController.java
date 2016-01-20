@@ -64,5 +64,12 @@ public class UserInfoController extends AbstractController{
 	public String completeInfo(){
 		return "commodity/completeInfo";
 	}
+	
+	@RequestMapping(value="complete")
+	@ResponseBody
+	public ResponseModel updateUserInfoComplete(HttpServletRequest request,UserInfoParams userInfoParams){
+		userInfoParams.setUserloginid(this.getUserId(request));
+		return userInfoService.updateUserInfoComplete(userInfoParams);
+	}
 
 }
