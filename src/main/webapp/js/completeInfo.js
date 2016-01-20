@@ -39,7 +39,11 @@ function complete(){
 		data:{'schoolid':schoolid,'professionalid':professionalid,'grade':grade},
 		dataType:'json',
 		success:function(data){
-			initTip(data.message);
+			if(data.success){
+				window.location.href = "/talker";
+			}else{
+				initTip(data.message);
+			}
 		},
 		error:function(){
 			initTip("哎呀，出错啦");
