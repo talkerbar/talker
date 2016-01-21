@@ -31,4 +31,12 @@ public interface CommodityService {
 	 * @return
 	 */
 	Commodity getCommodityForId(int id);
+	/**
+	 * 方法名: getHotCommodity
+	 * 说明 :  得到点击率最高的商品、手机号获取次数最多
+	 * 创建人 :   zdd       
+	 * 创建时间 : 2016-1-21 下午4:53:12 
+	 * 返回值  : List<Commodity>
+	 */
+	List<Commodity> getHotCommodity();
 }

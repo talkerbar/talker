@@ -177,4 +177,8 @@ public class CommodityServiceImpl implements CommodityService {
 		}
 		return null;
 	}
+
+	public List<Commodity> getHotCommodity() {
+		return commodityDao.getHotCommodity();
+	}
 }
