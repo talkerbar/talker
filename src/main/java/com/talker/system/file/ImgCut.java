@@ -10,19 +10,20 @@ import javax.imageio.ImageIO;
 import javax.imageio.ImageReadParam;
 import javax.imageio.ImageReader;
 import javax.imageio.stream.ImageInputStream;
+import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 public class ImgCut {
 	
-	private Log log = LogFactory.getLog(ImgCut.class);
+	private static Log log = LogFactory.getLog(ImgCut.class);
 
-	public void readUsingImageReader(String src, String dest,String formatName) {
+	public static void readUsingImageReader(HttpServletRequest request,String src, String dest) {
 		try {
 			// 取得图片读入器
 			Iterator<ImageReader> readers = ImageIO
-					.getImageReadersByFormatName(formatName);
+					.getImageReadersByFormatName("png");
 			ImageReader reader = (ImageReader) readers.next();
 			// 取得图片读入流
 			InputStream source = new FileInputStream(src);
@@ -42,7 +43,7 @@ public class ImgCut {
 			Rectangle rect = new Rectangle(left, top, width>height?height:width, width>height?height:width);
 			param.setSourceRegion(rect);
 			BufferedImage bi = reader.read(0, param);
-			ImageIO.write(bi,formatName, new File(dest));
+			ImageIO.write(bi,"png", new File(dest));
 		} catch (Exception e) {
 			log.error("剪切图片出现异常", e);
 			e.printStackTrace();
@@ -50,7 +51,6 @@ public class ImgCut {
 	}
 
 	public static void main(String[] args) throws Exception { // main方法测试用
-		ImgCut t = new ImgCut();
-		t.readUsingImageReader("f://2.png", "f://3.png","png");
+		//readUsingImageReader("f://2.jpg", "f://3.jpg");
 	}
 }
