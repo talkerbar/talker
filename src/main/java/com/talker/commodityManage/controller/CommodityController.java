@@ -77,4 +77,10 @@ public class CommodityController extends AbstractController {
 	List<Sort> getAllSortName(){
 		return commodityService.getAllSortName();
 	}
+	
+	@RequestMapping(value="hot")
+	@ResponseBody
+	public List<Commodity> getHotCommodity(HttpServletRequest request){
+		return commodityService.getHotCommodity(request);
+	}
 }

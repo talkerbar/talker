@@ -16,6 +16,7 @@ import com.talker.commodityManage.pojo.Commodity;
 import com.talker.commodityManage.pojo.Images;
 import com.talker.commodityManage.service.CommodityService;
 import com.talker.sortManage.pojo.Sort;
+import com.talker.system.file.ImgCut;
 import com.talker.system.file.Upload4Base64;
 import com.talker.util.ResponseModel;
 
@@ -178,7 +179,13 @@ public class CommodityServiceImpl implements CommodityService {
 		return null;
 	}
 
-	public List<Commodity> getHotCommodity() {
-		return commodityDao.getHotCommodity();
+	public List<Commodity> getHotCommodity(HttpServletRequest request) {
+		List<Commodity> hotList =  commodityDao.getHotCommodity();
+		for (Commodity commodity : hotList) {
+			if(!commodity.getImages().isEmpty()){
+				ImgCut.readUsingImageReader(request, commodity.getImages().get(0).getPath());
+			}
+		}
+		return hotList;
 	}
 }

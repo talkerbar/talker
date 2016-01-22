@@ -38,5 +38,5 @@ public interface CommodityService {
 	 * 创建时间 : 2016-1-21 下午4:53:12 
 	 * 返回值  : List<Commodity>
 	 */
-	List<Commodity> getHotCommodity();
+	List<Commodity> getHotCommodity(HttpServletRequest request);
 }

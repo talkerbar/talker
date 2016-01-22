@@ -30,7 +30,7 @@
 	            <bean class="com.talker.system.security.interceptor.SecurityInterceptor">
 	              <!-- 不检测的Controller 多个以逗号隔开 -->
 	              <property name="uncheckedUrl">
-	                 <value>/index,/list,/item,/userlogin/regist,/userlogin/login,/commodity/get,/commodity/allschoolname,/commodity/allsortname,/login,/regist,/menu/islogin,/commoditymessage/get</value>
+	                 <value>/index,/list,/item,/userlogin/regist,/userlogin/login,/commodity/get,/commodity/hot,/commodity/allschoolname,/commodity/allsortname,/login,/regist,/menu/islogin,/commoditymessage/get</value>
 	              </property>
 	              <!-- 登录URL -->
 	              <property name="login">
