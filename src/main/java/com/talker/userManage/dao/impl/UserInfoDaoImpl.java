@@ -17,6 +17,7 @@ import com.talker.sortManage.dao.SortDao;
 import com.talker.userManage.dao.UserInfoDao;
 import com.talker.userManage.pojo.UserInfoOut;
 import com.talker.userManage.pojo.UserInfoParams;
+import com.talker.util.StringHelper;
 
 @Repository
 public class UserInfoDaoImpl implements UserInfoDao {
@@ -30,9 +31,8 @@ public class UserInfoDaoImpl implements UserInfoDao {
 
 	public boolean addUserInfo(UserInfoParams userInfoParams) {
 		boolean result = false;
-		String sql = "insert into userinfo(gender,schoolid,professionalid,createdate,userloginid) values(?,?,?,?,?)";
-		Object[] params = {userInfoParams.getGender(),userInfoParams.getSchoolid(),userInfoParams.getProfessionalid(),
-				userInfoParams.getCreatedate(),userInfoParams.getUserloginid()};
+		String sql = "insert into userinfo(nickname,telephone,icon,createdate,userloginid) values(?,?,?,?,?)";
+		Object[] params = {userInfoParams.getNickname(),userInfoParams.getTelephone(),userInfoParams.getIcon(),userInfoParams.getCreatedate(),userInfoParams.getUserloginid()};
 		int i = jdbcTemplate.update(sql, params);
 		if(i!=0)
 			result = true;
@@ -129,6 +129,55 @@ public class UserInfoDaoImpl implements UserInfoDao {
 			log.error("获取头像时出错啦", e);
 		}
 		return null;
+	}
+
+	public boolean updateUserInfoComplete(UserInfoParams userInfoParams) {
+		boolean result = false;
+		StringBuffer sql = new StringBuffer("update userinfo set");
+		List<Object> params = new ArrayList<Object>();
+		if(userInfoParams!=null){
+			if(userInfoParams.getNickname()!=null){
+				sql.append(" nickname = ?,");
+				params.add(userInfoParams.getNickname());
+			}
+			if(userInfoParams.getRealname()!=null){
+				sql.append(" realname = ?,");
+				params.add(userInfoParams.getRealname());
+			}
+			if(userInfoParams.getGender()!=null){
+				sql.append(" gender = ?,");
+				params.add(userInfoParams.getGender());
+			}
+			if(userInfoParams.getGrade()!=null){
+				sql.append(" grade = ?,");
+				params.add(userInfoParams.getGrade());
+			}
+			if(userInfoParams.getSchoolid()!=null){
+				sql.append(" schoolid = ?,");
+				params.add(userInfoParams.getSchoolid());
+			}
+			if(userInfoParams.getProfessionalid()!=null){
+				sql.append(" professionalid = ?,");
+				params.add(userInfoParams.getProfessionalid());
+			}
+			if(userInfoParams.getTelephone()!=null){
+				sql.append(" telephone = ?,");
+				params.add(userInfoParams.getTelephone());
+			}
+			if(userInfoParams.getUpdatedate()!=null){
+				sql.append(" updatedate = ?,");
+				params.add(userInfoParams.getUpdatedate());
+			}
+		}
+		if(!params.isEmpty()){
+			sql = StringHelper.removeLast(sql.toString());
+			sql.append(" where userloginid = ?");
+			params.add(userInfoParams.getUserloginid());
+			int i = jdbcTemplate.update(sql.toString(), params.toArray());
+			if(i!=0)
+				result = true;
+		}
+		return result;
 	}
 
 }

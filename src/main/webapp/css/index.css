@@ -54,7 +54,7 @@
 /* ---------hot goods-------- */
 .hot-goods-warp {
 	width: 100%;
-	height: 366px;
+	height: 521px;
 }
 
 #hot-goods-warp-nav {
@@ -75,40 +75,28 @@
 	color: #F10582;
 }
 
-#hot-goods-warp-con {
-	width: 100%;
-	height: 326px;
-	overflow: hidden;
-}
-
-.hot-goods-warp-ad,.hot-goods-warp-googs {
-	display: inline-block;
-	height: 324px;
-}
-
-.hot-goods-warp-ad {
-	width: 190px;
-}
-
 .hot-goods-warp-googs {
-	width: 1010px;
-	/*  background:#F5F5F5; */
-	border-top: 1px solid #ddd;
+	width: 1200px;
+	overflow: hidden;
+	border-left:1px solid #ddd;
+	border-top:1px solid #ddd;
+	box-sizing:border-box;
 }
 
-.hot-goods-warp ul {
-	list-style: none;
-}
-
-.hot-goods-warp li {
+.hot-goods-warp-googs li {
 	list-style: none;
 	float: left;
-	width: 201px;
-	height: 161px;
-	border-right: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
+	width: 239.8px;
+	height: 239.8px;
+	border-right:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	box-sizing:border-box;
+	padding: 7px;
 }
-
+.hot-goods-warp-googs li img{
+	width: 100%;
+	border-radius:4px;
+}
 /* ---------floor------*/
 .floor-warp {
 	width: 100%;

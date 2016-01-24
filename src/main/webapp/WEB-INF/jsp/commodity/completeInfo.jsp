@@ -14,18 +14,13 @@
 			<li class="info-select">
 				<input type="text" id="school" placeholder="学校名称" />
 				<input type="hidden" id="schoolId"/>
-				<dl>
-					<dd data-id="1">郑州大学</dd>
-					<dd data-id="2">河南大学</dd>
-					<dd data-id="3">河南理工大学</dd>
-					<dd data-id="4">郑州轻工业学院</dd>
+				<dl id="auto-school">
 				</dl>
 			</li>
 			<li class="info-select">
 				<input type="text" id="professional" placeholder="专业名称" />
 				<input type="hidden" id="professionalId" />
-				<dl>
-					<dd data-id="1">计算机科学与技术</dd>
+				<dl id="auto-professional">
 				</dl>
 			</li>
 			<li class="info-select info-grade">
@@ -47,6 +42,15 @@
 			<button class="info-submit">完成</button>
 		</div>
 	</div>
+	<!-- 提示  -->
+    <div class="tip">
+    	<div class="tip-content"></div>
+    	<div class="confirm">
+    		<button>确认</button>
+    	</div>
+    </div>
+    <div class="tip-mask"></div>
+    <!-- 提示  -->
 </body>
 <script type="text/javascript" src="/talker/js/jquery.min.js"></script>
 <script type="text/javascript" src="/talker/js/completeInfo.js"></script>

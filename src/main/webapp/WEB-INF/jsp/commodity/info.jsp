@@ -108,6 +108,7 @@
                  	年级
                </label>
                <select id="grade" name="grade">
+               		<option value="0">请选择</option>
                		<option value="1" ${rm.object.userInfoOut.grade==1?"selected":""}>大一</option>
                		<option value="2" ${rm.object.userInfoOut.grade==2?"selected":""}>大二</option>
                		<option value="3" ${rm.object.userInfoOut.grade==3?"selected":""}>大三</option>

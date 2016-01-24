@@ -10,13 +10,16 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.talker.apiManage.cache.MemcachedPool;
 import com.talker.system.security.service.impl.HandelMenuAndRight;
 import com.talker.system.security.vo.UserSession;
 import com.talker.userManage.dao.UserLoginDao;
+import com.talker.userManage.pojo.UserInfoParams;
 import com.talker.userManage.pojo.UserLoginOut;
 import com.talker.userManage.pojo.UserLoginParams;
+import com.talker.userManage.service.UserInfoService;
 import com.talker.userManage.service.UserLoginService;
 import com.talker.util.CookieUtil;
 import com.talker.util.ResponseModel;
@@ -33,7 +36,10 @@ public class UserLoginServiceImpl implements UserLoginService {
 	private UserLoginDao userLoginDao;
 	@Autowired
 	private HandelMenuAndRight handelMenuAndRight;
+	@Autowired
+	private UserInfoService userInfoService;
 
+	@Transactional
 	public ResponseModel regist(HttpServletRequest request,HttpServletResponse response,UserLoginParams loginParams) {
 		boolean success = false;
 		String message = "请求参数异常";
@@ -42,19 +48,31 @@ public class UserLoginServiceImpl implements UserLoginService {
 			if(userLoginOut==null){
 				int userId = userLoginDao.regist(loginParams);
 				if(userId!=0){
-					success= true;
-					message= "恭喜您，注册成功";
-					// 获取会话，不存在则会创建一个会话
-					HttpSession session = request.getSession(true);
-					// 得到权限
-					UserSession userSession = handelMenuAndRight.prepareMenuAndRight4User(new UserSession(), userId);
-					userSession.setSessionId(session.getId());
-					userSession.setUserLogin(UserLoginOut.loginParamsToLoginOut(loginParams));
-					// 用户信息存入memcached有效期为半个小时
-					MemcachedPool.set(session.getId(), userSession, new Date(CookieUtil.HOUR/2));
-					// 存储session,user
-					CookieUtil.setCookie(CookieUtil.CookieValue.COOKIE_SESSION_ID, session.getId(), CookieUtil.HOUR/2, response, request);
-					CookieUtil.setCookie(CookieUtil.CookieValue.COOKIE_USER_ID, String.valueOf(userId), CookieUtil.WEEK, response, request);
+					//添加用户基本信息
+					UserInfoParams userInfoParams = new UserInfoParams();
+					userInfoParams.setUserloginid(userId);
+					//目前只支持电话形式的注册
+					userInfoParams.setTelephone(loginParams.getUsername());
+					ResponseModel userInfoResult = userInfoService.addUserInfo(userInfoParams);
+					if(userInfoResult.isSuccess()){
+						success= true;
+						message= "恭喜您，注册成功";
+						// 获取会话，不存在则会创建一个会话
+						HttpSession session = request.getSession(true);
+						// 得到权限
+						UserSession userSession = handelMenuAndRight.prepareMenuAndRight4User(new UserSession(), userId);
+						userSession.setSessionId(session.getId());
+						userSession.setUserLogin(UserLoginOut.loginParamsToLoginOut(loginParams));
+						// 用户信息存入memcached有效期为半个小时
+						MemcachedPool.set(session.getId(), userSession, new Date(CookieUtil.HOUR/2));
+						// 存储session,user
+						CookieUtil.setCookie(CookieUtil.CookieValue.COOKIE_SESSION_ID, session.getId(), CookieUtil.HOUR/2, response, request);
+						CookieUtil.setCookie(CookieUtil.CookieValue.COOKIE_USER_ID, String.valueOf(userId), CookieUtil.WEEK, response, request);
+					}else{
+						message = "添加用户信息出现了问题";
+						//事务回滚
+						throw new RuntimeException();
+					}
 				}else{
 					message = "哎呀，发生了什么，注册失败了";
 				}
@@ -134,7 +152,10 @@ public class UserLoginServiceImpl implements UserLoginService {
 		if(loginParams==null){
 			return false;
 		}
-		if(loginParams.getUsername()==null || loginParams.getPassword()==null){
+		if(loginParams.getUsername()==null || loginParams.getPassword()==null||loginParams.getSecurity_code()==null||loginParams.getRepassword()==null){
+			return false;
+		}
+		if(!loginParams.getPassword().equals(loginParams.getRepassword())){
 			return false;
 		}
 		// 不等于空格判断

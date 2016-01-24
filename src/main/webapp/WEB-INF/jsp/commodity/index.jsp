@@ -68,7 +68,7 @@
 	            <img src="/talker/images/1.jpg" alt="">
 	          </a>
 	        </li>
-	        <li class="swiper-slide">
+	        <!-- <li class="swiper-slide">
 	          <a href="">
 	            <img src="/talker/images/2.jpg" alt="">
 	          </a>
@@ -77,7 +77,7 @@
 	          <a href="">
 	            <img src="/talker/images/3.jpg" alt="">
 	          </a>
-	        </li>
+	        </li> -->
       </ul>
       <ol class="swiper-pagination swiper-pagination-tab"></ol>
     </div>
@@ -105,66 +105,9 @@
            </span>
          </p>
        </div>
-       <div id="hot-goods-warp-con">
-          <div class="hot-goods-warp-ad">
-             <a href="">
-               <img src="/talker/images/goods-ad.jpg" alt="">
-             </a>
-          </div><!--
-       --><div class="hot-goods-warp-googs">
-              <ul>
-                <li>
-                  <a href="">
-                    <img src="" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="" alt="">
-                  </a>
-                </li>
-              </ul>
-          </div>
+       <div class="hot-goods-warp-googs">
+           <ul>
+           </ul>
        </div>
      </div>
      <!--  Hot Goods end -->
@@ -370,18 +313,18 @@
        </div>
      </div>
     <!-- daren -->
-    <div class="daren-warp">
+<!--     <div class="daren-warp">
        <div id="daren-warp-text">
           <p>Forever</p><span>●</span><h2>不离不弃</h2>
        </div>
        <div id="daren-warp-con">
          <div id="daren-warp-con-left">
             <ul>
-              <li class="current-daren">1</li><!--
-           --><li>2</li><!--
-           --><li>3</li><!--
-           --><li>4</li><!--
-           --><li>5</li>
+              <li class="current-daren">1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
             </ul>
          </div>
          <div id="daren-warp-con-right">
@@ -414,7 +357,7 @@
            </ul>
          </div>
        </div>
-    </div>
+    </div> -->
     <!-- talker bottom  -->
     <div class="bottom-warp">
       <ul>

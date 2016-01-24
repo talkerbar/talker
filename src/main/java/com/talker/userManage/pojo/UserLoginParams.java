@@ -9,6 +9,10 @@ public class UserLoginParams extends UserLogin implements Serializable {
 	
 	private Date createdate;
 	private Date updatedate;
+	//验证码
+	private String security_code;
+	//重复密码
+	private String repassword;
 	public UserLoginParams() {
 		super();
 	}
@@ -23,6 +27,18 @@ public class UserLoginParams extends UserLogin implements Serializable {
 	}
 	public void setUpdatedate(Date updatedate) {
 		this.updatedate = updatedate;
+	}
+	public String getSecurity_code() {
+		return security_code;
+	}
+	public void setSecurity_code(String security_code) {
+		this.security_code = security_code;
+	}
+	public String getRepassword() {
+		return repassword;
+	}
+	public void setRepassword(String repassword) {
+		this.repassword = repassword;
 	}
 	@Override
 	public String toString() {

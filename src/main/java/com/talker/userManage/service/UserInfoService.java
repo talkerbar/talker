@@ -19,5 +19,7 @@ public interface UserInfoService {
 	ResponseModel updateUserIcon(String file,Integer userloginid,HttpServletRequest request);
 	
 	public String getUserIcon(Integer userloginid);
+	
+	ResponseModel updateUserInfoComplete(UserInfoParams userInfoParams);
 
 }
