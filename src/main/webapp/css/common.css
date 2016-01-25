@@ -188,7 +188,7 @@ a {
 }
 
 .all-sort-warp ul>li:not(:first-child):hover{
-	background:rgba(0,0,0,0.6);
+	background:rgba(0,0,0,0.5);
 }
 
 #sort-first {

@@ -56,8 +56,8 @@ function hotCommodity(){
 			var htm = '';
 			for ( var int = 0; int < data.length && int < 10; int++) {
 				htm += '<li>' +
-		                  '<a href="/talker/item?id='+data[int].id+'">' +
-			                '<img src="/talker/upload/small/'+data[int].images[0].path+'" alt="'+data[int].title+'">' +
+		                  '<a title = "'+data[int].title+'" href="/talker/item?id='+data[int].id+'">' +
+			                '<img src="/talker/upload/small/'+data[int].images[0].path+'">' +
 			              '</a>' +
 			            '</li>';
 			}

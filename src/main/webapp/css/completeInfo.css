@@ -91,6 +91,9 @@ dd{
 	border-bottom: 1px solid #ddd;
 	height: 40px;
 	line-height: 40px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 dd:hover{
 	background: #ddd;

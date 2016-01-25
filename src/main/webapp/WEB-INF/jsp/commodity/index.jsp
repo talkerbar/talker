@@ -46,9 +46,9 @@
 	              <li>手机/电脑/电脑配件</li>
 	              <li>摩托车/电动车/自行车</li>
 	              <li>数码3C产品</li>
-	              <li>书籍/文体用品</li>
-	              <li>箱包配饰</li>
-	              <li>生活服务</li>
+	              <li>书籍/书刊音像/文体用品</li>
+	              <li>相机/摄像机</li>
+	              <li>其他闲置</li>
 	            </ul>   
 	         </div>
 	         <div class="nav-items">
@@ -68,18 +68,8 @@
 	            <img src="/talker/images/1.jpg" alt="">
 	          </a>
 	        </li>
-	        <!-- <li class="swiper-slide">
-	          <a href="">
-	            <img src="/talker/images/2.jpg" alt="">
-	          </a>
-	        </li>
-	        <li class="swiper-slide">
-	          <a href="">
-	            <img src="/talker/images/3.jpg" alt="">
-	          </a>
-	        </li> -->
       </ul>
-      <ol class="swiper-pagination swiper-pagination-tab"></ol>
+      <!-- <ol class="swiper-pagination swiper-pagination-tab"></ol> -->
     </div>
 
     <div class="content-warp">
