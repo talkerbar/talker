@@ -42,7 +42,7 @@
 		<div class="top-warp-bottom">
   			<div class="all-sort-warp">
 	            <ul>
-	              <li id="sort-first">全部商品分类</li>
+	              <li id="sort-first">全部商品分类<span class="all-sort"></span></li>
 	              <li>手机/电脑/电脑配件</li>
 	              <li>摩托车/电动车/自行车</li>
 	              <li>数码3C产品</li>
