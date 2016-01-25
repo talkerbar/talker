@@ -135,8 +135,13 @@ public class CommodityDaoImpl implements CommodityDao {
 				sql.append(" and status = ?");
 				params.add(c.getStatus());
 			}
+			sql.append(" ORDER BY status,createdate DESC");
+			if(c.getPageNum()!=null){
+				sql.append(" limit ?,?");
+				params.add(c.getBegin());
+				params.add(c.getEnd());
+			}
 		}
-		sql.append(" ORDER BY status,createdate DESC");
 		final List<Commodity> list = new ArrayList<Commodity>();
 		jdbcTemplate.query(sql.toString(), params.toArray(), new RowCallbackHandler() {
 			

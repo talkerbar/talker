@@ -36,6 +36,10 @@ public class Commodity implements Serializable{
     private Integer visits;          // 商品浏览量
     private String schoolName;       // 商品所在学校
     private Integer phoneRecords;    // 获取电话次数
+    private Integer pageSize = 40;   // 每页数据条数
+    private Integer pageNum;		 // 当前页码
+    private Integer begin;
+    private Integer end;
     
 	public Commodity() {
 		super();
@@ -218,18 +222,40 @@ public class Commodity implements Serializable{
 	public String getStarcellnumber() {
 		return starcellnumber;
 	}
-
-	@Override
-	public String toString() {
-		return "Commodity [id=" + id + ", title=" + title + ", sortid="
-				+ sortid + ", newandold=" + newandold + ", newprice="
-				+ newprice + ", oldprice=" + oldprice + ", dicker=" + dicker
-				+ ", cellnumber=" + cellnumber + ", callname=" + callname
-				+ ", schoolid=" + schoolid + ", description=" + description
-				+ ", userid=" + userid + ", createdate=" + createdate
-				+ ", updatedate=" + updatedate + ", status=" + status
-				+ ", images=" + images + ", userInfoOut=" + userInfoOut
-				+ ", visits=" + visits + "]";
+	public Integer getPageSize() {
+		return pageSize;
 	}
 
+	public void setPageSize(Integer pageSize) {
+		this.pageSize = pageSize;
+	}
+
+	public Integer getPageNum() {
+		return pageNum;
+	}
+
+	public void setPageNum(Integer pageNum) {
+		this.pageNum = pageNum;
+	}
+
+	public Integer getBegin() {
+		if(this.pageNum==0)
+			return 0;
+		else
+			return (pageNum-1)*pageSize;
+	}
+	public void setBegin(Integer begin) {
+		this.begin = begin;
+	}
+
+	public void setEnd(Integer end) {
+		this.end = end;
+	}
+
+	public Integer getEnd() {
+		if(this.pageNum==0)
+			return pageSize;
+		else
+			return pageNum*pageSize;
+	}
 }
