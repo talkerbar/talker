@@ -13,7 +13,21 @@ public interface CommodityService {
 	ResponseModel addCommodity(String[] file,Commodity c,HttpServletRequest request);
 	ResponseModel delCommodity(int status,int id);
 	boolean updateCommodity(String[] file,Commodity c,HttpServletRequest request);
-	List<Commodity> getCommodity(Commodity c);
+	/**
+	 * 方法名: getCommodity
+	 * 说明 :  查询商品主方法
+	 * 创建人 :   zdd       
+	 * 创建时间 : 2016-1-26 上午11:25:14 
+	 * 返回值  : List<Commodity>
+	 */
+	List<Commodity> getCommodity(HttpServletRequest request,Commodity c);
+	/**
+	 * 方法名: getCellnumber
+	 * 说明 :  根据商品ID得到手机号
+	 * 创建人 :   zdd       
+	 * 创建时间 : 2016-1-26 上午11:24:49 
+	 * 返回值  : String
+	 */
 	String getCellnumber(int id);
 	/**
 	 * 得到所有商品所在的学校

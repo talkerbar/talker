@@ -87,7 +87,7 @@ li.lastli{
 }
 /* common */
 
-/* 我的资料 */
+/* 锟揭碉拷锟斤拷锟斤拷 */
 .userinfo{
 	width: 510px;
 	border-right: 1px solid #ddd;
@@ -217,6 +217,8 @@ label[for=male],label[for=female]{
 .nextSortDate  li{
     display: inline-block;
     width: 120px;
+    box-sizing:border-box;
+    padding-left:10px;
 }
 .warp_professionalDate{
 	position: fixed;
@@ -266,9 +268,9 @@ label[for=male],label[for=female]{
 	background: #ff649d;
 	color: #fff;
 }
-/* 我的资料 */
+/* 锟揭碉拷锟斤拷锟斤拷 */
 
-/* 我的宝贝  */
+/* 锟揭的憋拷锟斤拷  */
 .warp-commodity-list{
 	width: 480px;
 	margin: 20px;
@@ -357,9 +359,9 @@ b.color{
 	background: #ff649d!important;
 	color:#fff!important;
 }
-/* 我的宝贝 */
+/* 锟揭的憋拷锟斤拷 */
 
-/* 我的消息 */
+/* 锟揭碉拷锟斤拷息 */
 .warp-msg{
 	width: 900px;
 	margin: 40px auto;
@@ -495,9 +497,9 @@ span.num-big{
 .record-content-tip{
 	color: #f00;
 }
-/* 我的消息 */
+/* 锟揭碉拷锟斤拷息 */
 
-/* 发布闲置 */
+/* 锟斤拷锟斤拷锟斤拷锟斤拷 */
 #newprice,#oldprice{
 	width: 96px;
 }
@@ -646,9 +648,9 @@ li.description label{
 	background: #ff649d;
 	color: #fff;
 }
-/* 发布闲置 */
+/* 锟斤拷锟斤拷锟斤拷锟斤拷 */
 
-/* 输入提示统一样式 */
+/* 锟斤拷锟斤拷锟斤拷示统一锟斤拷式 */
 .inputTip{
 	position:relative;
 	padding:4px 8px;
@@ -674,9 +676,9 @@ li.description label{
 	border: 1px solid #ff649d!important;
 	background-color: #ffeded!important;
 }
-/* 输入提示统一样式 */
+/* 锟斤拷锟斤拷锟斤拷示统一锟斤拷式 */
 
-/* 统一提示 */
+/* 统一锟斤拷示 */
 .tip{
 	width: 300px;
 	height: 140px;
@@ -724,8 +726,8 @@ li.description label{
 	opacity:.2;
 	display: none;
 }
-/* 统一提示 */
-/* 选择头像预览样式 */
+/* 统一锟斤拷示 */
+/* 选锟斤拷头锟斤拷预锟斤拷锟斤拷式 */
 .preview-head{
 	width: 600px;
 	height: auto;
@@ -829,4 +831,4 @@ li.description label{
 .head-pre-save{
 	margin-right:10px; 
 }
-/* 选择头像预览样式 */
+/* 选锟斤拷头锟斤拷预锟斤拷锟斤拷式 */

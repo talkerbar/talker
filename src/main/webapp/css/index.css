@@ -20,6 +20,7 @@
 	background: #ddd;
 	float: left;
 }
+
 .swiper-slide {
 	text-align: center;
 	font-size: 18px;
@@ -78,9 +79,9 @@
 .hot-goods-warp-googs {
 	width: 1200px;
 	overflow: hidden;
-	border-left:1px solid #ddd;
-	border-top:1px solid #ddd;
-	box-sizing:border-box;
+	/* border-left: 1px solid #ddd;
+	border-top: 1px solid #ddd; */
+	box-sizing: border-box;
 }
 
 .hot-goods-warp-googs li {
@@ -88,19 +89,19 @@
 	float: left;
 	width: 239.8px;
 	height: 239.8px;
-	border-right:1px solid #ddd;
-	border-bottom:1px solid #ddd;
-	box-sizing:border-box;
-	padding: 7px;
+	/* border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd; */
+	box-sizing: border-box;
+	padding: 4px;
 }
-.hot-goods-warp-googs li img{
+
+.hot-goods-warp-googs li img {
 	width: 100%;
-	border-radius:4px;
+	/* border-radius: 4px; */
 }
 /* ---------floor------*/
 .floor-warp {
 	width: 100%;
-	height: 500px;
 	margin-top: 30px;
 }
 
@@ -108,7 +109,6 @@
 	width: 100%;
 	height: 40px;
 	line-height: 40px;
-	border-bottom: 1px solid #ddd;
 }
 
 .floor-warp-subject {
@@ -143,7 +143,7 @@
 	position: relative;
 	overflow: hidden;
 }
-/* 杞挱寮� */
+
 .ul-warp-rotation-ul {
 	width: 9999px;
 	position: absolute;
@@ -157,26 +157,7 @@
 	height: 230px;
 	float: left;
 }
-/* .ul-warp-rotation-ol{
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        top: 200px;
-        z-index: 10;
-      }
-      .ul-warp-rotation-ol li{
-        display: inline-block;
-        height: 14px;
-        width: 14px;
-        background: #fff;
-        cursor: pointer;
-        border-radius: 7px;
-      }
-      li.current-img{
-        background: #000;
-      } */
-/* 杞挱缁撴潫 */
-/* 妯″潡浜�灏忓潡 */
+
 .ul-warp-4 li {
 	width: 219px;
 	height: 114px;
@@ -184,9 +165,7 @@
 	border-right: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 }
-/* 妯″潡涓�灏忓潡 */
 
-/* 妯″潡涓�灏忓潡 */
 .ul-warp-2 li {
 	width: 219px;
 	height: 229px;
@@ -194,7 +173,6 @@
 	border-right: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 }
-/* 妯″潡涓�灏忓潡 */
 /* ---------floor------*/
 
 /* -------botton ad--- */
@@ -203,88 +181,144 @@
 	margin: 20px auto 20px auto;
 	text-align: center;
 }
-/* -------daren------- */
-.daren-warp {
+
+/* 商品列表 */
+.warp-commodity {
 	width: 1200px;
-	height: 300px;
-	margin: 0 auto;
+	box-sizing: border-box;
+	margin: 5px auto 0px auto;
+	border-left: 1px solid #eee;
+	border-top: 1px solid #eee;
 }
 
-#daren-warp-text {
-	width: 100%;
-	height: 60px;
+.warp-commodity-list {
+	overflow: hidden;
 }
 
-#daren-warp-text h2,#daren-warp-text p,#daren-warp-text span {
-	display: inline-block;
-	height: 60px;
-	line-height: 60px;
-	margin-left: 5px;
-}
-
-#daren-warp-text p {
-	font-size: 1.6rem;
-	font-style: italic;
-	color: #F10582;
-	font-weight: bold;
-}
-
-#daren-warp-text span {
-	font-size: 1.6rem;
-	color: #F10582;
-}
-
-#daren-warp-con {
-	width: 100%;
-	height: 240px;
-}
-
-#daren-warp-con ul {
-	list-style: none;
-}
-
-#daren-warp-con li {
-	list-style: none;
-}
-
-#daren-warp-con-left {
+.commodity-list {
+	width: 299.75px;
+	/* height: 400px; */
+	box-sizing: border-box;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 	float: left;
-	height: 100%;
-	width: 98px;
-	border-top: 1px solid #ddd;
-	border-left: 1px solid #ddd;
-	border-right: 1px solid #ddd;
 }
 
-#daren-warp-con-left li {
-	height: 47px;
-	line-height: 47px;
+.commodity-list-img {
+	width: 299.75px;
+	height: 299.75px;
+	box-sizing: border-box;
+	/* border-bottom: 1px solid #ddd; */
+	display: table-cell;
+	vertical-align: middle;
 	text-align: center;
-	cursor: pointer;
 }
 
-#daren-warp-con-left li {
-	border-bottom: 1px solid #ddd;
+.commodity-list-img img {
+	max-width: 290px;
+	max-height: 290px;
 }
 
-.current-daren {
-	border-left: 2px solid #F10582;
-	color: #F10582;
+.commodity-list-title>a:hover {
+	color: #ff649d;
+	text-decoration: underline;
 }
 
-#daren-warp-con-right {
+.commodity-list-school>a:hover {
+	color: #ff649d;
+	text-decoration: underline;
+}
+
+.commodity-list-title,.commodity-list-price,.commodity-list-school {
+	height: 30px;
+}
+
+.commodity-list-title  p {
+	display: block;
+	width: 299.75px;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 5px;
+	box-sizing: border-box;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.commodity-list-price span {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+}
+
+.commodity-list-price span:first-child {
+	padding: 0 5px;
+	font-size: 22px;
+	color: #ff649d;
+}
+
+.commodity-list-school p {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 8px;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+.commodity-list-school span {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #f60;
+	vertical-align: top;
+	padding: 0 5px;
+}
+
+.commodity-list-user {
+	width: 100%;
+	height: 49px;
+	padding-left: 5px;
+	padding-top: 4.5px;
+	box-sizing: border-box;
+}
+
+.commodity-list-user div {
+	height: 40px;
+	line-height: 40px;
+}
+
+.commodity-list-user-head {
+	width: 40px;
+	border-radius: 20px;
+	overflow: hidden;
 	float: left;
-	width: 1080px;
-	height: 100%;
-	margin-left: 19px;
-	border-left: 1px solid #ddd;
 }
 
-#daren-warp-con-right li {
+.commodity-list-user-head>img {
+	max-width: 40px;
+	max-height: 40px;
+}
+
+.commodity-list-user-nickname {
+	padding: 0 5px;
 	float: left;
-	height: 238px;
-	width: 215px;
-	border-top: 1px solid #ddd;
+}
+
+.commodity-list-user-data {
+	padding: 0 5px;
+	float: right;
+}
+/* loading */
+.loading {
+	width: 1198px;
 	border-right: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
+	text-align: center;
 }
+
+.loading>img {
+	width: 400px;
+}
+/* loading */

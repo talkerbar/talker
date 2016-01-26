@@ -79,32 +79,32 @@ li.current{
   width: 1200px;
   box-sizing:border-box;
   margin: 15px auto 0px auto;
-  border-left: 1px solid #ddd;
-  border-top: 1px solid #ddd;
+  border-left: 1px solid #eee;
+  border-top: 1px solid #eee;
 }
 .warp-commodity-list{
   overflow: hidden;
 }
 .commodity-list{
   width: 299.75px;
-  height: 400px;
+  /* height: 400px; */
   box-sizing:border-box;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
   float: left;
 }
 .commodity-list-img{
   width: 299.75px;
-  height: 260px;
+  height: 299.75px;
   box-sizing:border-box;
-  border-bottom: 1px solid #ddd;
+  /* border-bottom: 1px solid #ddd; */
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
 .commodity-list-img img{
-  max-width: 260px;
-  max-height: 240px;
+  max-width: 290px;
+  max-height: 290px;
   border-radius: 4px;
 }
 .commodity-list-title > a:hover{

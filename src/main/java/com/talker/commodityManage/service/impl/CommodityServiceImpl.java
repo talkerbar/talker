@@ -109,8 +109,14 @@ public class CommodityServiceImpl implements CommodityService {
 		return true;
 	}
 
-	public List<Commodity> getCommodity(Commodity c) {
-		return commodityDao.getCommodity(c);
+	public List<Commodity> getCommodity(HttpServletRequest request,Commodity c) {
+		List<Commodity> list = commodityDao.getCommodity(c);
+		for (Commodity commodity : list) {
+			if(!commodity.getImages().isEmpty()){
+				ImgCut.readUsingImageReader(request, commodity.getImages().get(0).getPath());
+			}
+		}
+		return list;
 	}
 	
 	// 添加商品参数检测

@@ -42,13 +42,13 @@
 		<div class="top-warp-bottom">
   			<div class="all-sort-warp">
 	            <ul>
-	              <li id="sort-first">全部商品分类</li>
+	              <li id="sort-first">全部商品分类<span class="all-sort"></span></li>
 	              <li>手机/电脑/电脑配件</li>
 	              <li>摩托车/电动车/自行车</li>
 	              <li>数码3C产品</li>
-	              <li>书籍/文体用品</li>
-	              <li>箱包配饰</li>
-	              <li>生活服务</li>
+	              <li>书籍/书刊音像/文体用品</li>
+	              <li>相机/摄像机</li>
+	              <li>其他闲置</li>
 	            </ul>   
 	         </div>
 	         <div class="nav-items">
@@ -68,18 +68,8 @@
 	            <img src="/talker/images/1.jpg" alt="">
 	          </a>
 	        </li>
-	        <!-- <li class="swiper-slide">
-	          <a href="">
-	            <img src="/talker/images/2.jpg" alt="">
-	          </a>
-	        </li>
-	        <li class="swiper-slide">
-	          <a href="">
-	            <img src="/talker/images/3.jpg" alt="">
-	          </a>
-	        </li> -->
       </ul>
-      <ol class="swiper-pagination swiper-pagination-tab"></ol>
+      <!-- <ol class="swiper-pagination swiper-pagination-tab"></ol> -->
     </div>
 
     <div class="content-warp">
@@ -106,258 +96,65 @@
          </p>
        </div>
        <div class="hot-goods-warp-googs">
-           <ul>
-           </ul>
+	        <div class="loading">
+				<img src="/talker/images/loading.gif">
+			</div>
        </div>
      </div>
      <!--  Hot Goods end -->
-     <!--  图书馆  -->
-     <div class="floor-warp">
+     
+     <!-- 图书馆  -->
+     <div id="library" class="floor-warp">
        <div class="floor-warp-text">
           <h2 class="inline-block">图书馆</h2>
           <p class="hot-text inline-block"></p>
        </div>
-       <div class="floor-warp-subject">
-         <div class="floor-warp-subject-items inline-block">
-             <a href=""><img src="/talker/images/2015me.jpg" alt=""></a>
-         </div><!--
-      --><div class="floor-warp-subject-body inline-block">
-              <ul class="ul-warp">
-                <li class="ul-warp-rotation swiper-container swiper-container-library">
-                  <ul class="ul-warp-rotation-ul swiper-wrapper">
-                    <li class="swiper-slide">
-                      <a href="">
-                        <img src="/talker/images/2015small.jpg" alt="">
-                      </a>
-                    </li>
-                    <li class="swiper-slide">
-                      <a href="">
-                        <img src="/talker/images/2015small.jpg" alt="">
-                      </a>
-                    </li>
-                    <li class="swiper-slide">
-                      <a href="">
-                        <img src="/talker/images/2015small.jpg" alt="">
-                      </a>
-                    </li>
-                    <li class="swiper-slide">
-                      <a href="">
-                        <img src="/talker/images/2015small.jpg" alt="">
-                      </a>
-                    </li>
-                  </ul>
-                  <ol class="swiper-pagination swiper-pagination-library"></ol>
-                </li><!--
-             --><li class="ul-warp-4">
-                   <ul>
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                   </ul>
-                </li><!--
-             --><li class="ul-warp-2">
-                   <ul>
-                     <li></li>
-                     <li></li>
-                   </ul>
-               </li><!--
-             --><li class="ul-warp-2">
-                    <ul>
-                     <li></li>
-                     <li></li>
-                   </ul>
-                </li>
-              </ul>
-         </div>
-       </div>
-       
-     </div>
+		<!-- 商品列表开始 -->
+		<div class="warp-commodity">
+			<div class="warp-commodity-list">
+				<div class="loading">
+					<img src="/talker/images/loading.gif">
+				</div>
+			</div>
+		</div>
+		<!-- 商品列表结束 -->
+	 </div>
      <!-- 图书馆 -->
-
      <!-- 车行  -->
-     <div class="floor-warp">
+     <div id="dealers" class="floor-warp">
        <div class="floor-warp-text">
           <h2 class="inline-block">车行</h2>
           <p class="hot-text inline-block"></p>
        </div>
-       <div class="floor-warp-subject">
-         <div class="floor-warp-subject-items inline-block">
-             <a href=""><img src="/talker/images/2015me.jpg" alt=""></a>
-         </div><!--
-      --><div class="floor-warp-subject-body inline-block">
-              <ul class="ul-warp">
-                <li class="ul-warp-rotation swiper-container swiper-container-vehicle">
-                  <ul class="ul-warp-rotation-ul swiper-wrapper">
-                    <li class="swiper-slide">
-                      <a href="">
-                        <img src="/talker/images/2015small.jpg" alt="">
-                      </a>
-                    </li>
-                    <li class="swiper-slide">
-                      <a href="">
-                        <img src="/talker/images/2015small.jpg" alt="">
-                      </a>
-                    </li>
-                    <li class="swiper-slide">
-                      <a href="">
-                        <img src="/talker/images/2015small.jpg" alt="">
-                      </a>
-                    </li>
-                    <li class="swiper-slide">
-                      <a href="">
-                        <img src="/talker/images/2015small.jpg" alt="">
-                      </a>
-                    </li>
-                  </ul>
-                  <ol class="swiper-pagination swiper-pagination-vehicle"></ol>
-                </li>
-                <li class="ul-warp-4">
-                   <ul>
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                   </ul>
-                </li>
-                <li class="ul-warp-2">
-                   <ul>
-                     <li></li>
-                     <li></li>
-                   </ul>
-               </li>
-               <li class="ul-warp-2">
-                    <ul>
-                     <li></li>
-                     <li></li>
-                   </ul>
-                </li>
-              </ul>
-         </div>
-       </div>
-       
-     </div>
+		<!-- 商品列表开始 -->
+		<div class="warp-commodity">
+			<div class="warp-commodity-list">
+				<div class="loading">
+					<img src="/talker/images/loading.gif">
+				</div>
+			</div>
+		</div>
+		<!-- 商品列表结束 -->
+	 </div>
      <!-- 车行 -->
-
-    <!-- 电子城  -->
-     <div class="floor-warp">
+     <!-- 电子城  -->
+     <div id="electronic-city" class="floor-warp">
        <div class="floor-warp-text">
           <h2 class="inline-block">电子城</h2>
           <p class="hot-text inline-block"></p>
        </div>
-       <div class="floor-warp-subject">
-         <div class="floor-warp-subject-items inline-block">
-             <a href=""><img src="/talker/images/2015me.jpg" alt=""></a>
-         </div><!--
-      --><div class="floor-warp-subject-body inline-block">
-              <ul class="ul-warp">
-                <li class="ul-warp-rotation swiper-container swiper-container-digital">
-                  <ul class="ul-warp-rotation-ul swiper-wrapper">
-                    <li class="swiper-slide">
-                      <a href="">
-                        <img src="/talker/images/2015small.jpg" alt="">
-                      </a>
-                    </li>
-                    <li class="swiper-slide">
-                      <a href="">
-                        <img src="/talker/images/2015small.jpg" alt="">
-                      </a>
-                    </li>
-                    <li class="swiper-slide">
-                      <a href="">
-                        <img src="/talker/images/2015small.jpg" alt="">
-                      </a>
-                    </li>
-                    <li class="swiper-slide">
-                      <a href="">
-                        <img src="/talker/images/2015small.jpg" alt="">
-                      </a>
-                    </li>
-                  </ul>
-                  <ol class="swiper-pagination swiper-pagination-digital"></ol>
-                </li><!--
-             --><li class="ul-warp-4">
-                   <ul>
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                     <li></li>
-                   </ul>
-                </li><!--
-             --><li class="ul-warp-2">
-                   <ul>
-                     <li></li>
-                     <li></li>
-                   </ul>
-               </li><!--
-             --><li class="ul-warp-2">
-                    <ul>
-                     <li></li>
-                     <li></li>
-                   </ul>
-                </li>
-              </ul>
-         </div>
-       </div>
-       
-     </div>
+		<!-- 商品列表开始 -->
+		<div class="warp-commodity">
+			<div class="warp-commodity-list">
+				<div class="loading">
+					<img src="/talker/images/loading.gif">
+				</div>
+			</div>
+		</div>
+		<!-- 商品列表结束 -->
+	 </div>
      <!-- 电子城 -->
     </div>
-    
-    <!--  bottom ad  -->
-      <div class="bottom-ad-warp">
-       <div>
-         <a href="">
-           <img src="/talker/images/2015ad.jpg" alt="">
-         </a>
-       </div>
-     </div>
-    <!-- daren -->
-<!--     <div class="daren-warp">
-       <div id="daren-warp-text">
-          <p>Forever</p><span>●</span><h2>不离不弃</h2>
-       </div>
-       <div id="daren-warp-con">
-         <div id="daren-warp-con-left">
-            <ul>
-              <li class="current-daren">1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-            </ul>
-         </div>
-         <div id="daren-warp-con-right">
-           <ul>
-             <li>
-               <a href="">
-                 <img src="" alt="">
-               </a>
-             </li>
-             <li>
-               <a href="">
-                 <img src="" alt="">
-               </a>
-             </li>
-             <li>
-               <a href="">
-                 <img src="" alt="">
-               </a>
-             </li>
-             <li>
-               <a href="">
-                 <img src="" alt="">
-               </a>
-             </li>
-             <li>
-               <a href="">
-                 <img src="" alt="">
-               </a>
-             </li>
-           </ul>
-         </div>
-       </div>
-    </div> -->
     <!-- talker bottom  -->
     <div class="bottom-warp">
       <ul>
