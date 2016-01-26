@@ -74,7 +74,7 @@ function getCommodity(schoolid,sortid){
 				              '<span>￥'+commoditys[int].newprice+'</span><span><s>￥'+commoditys[int].oldprice+'</s></span>' +
 				            '</li>' +
 				            '<li class="commodity-list-school">' +
-				              '<a href="/talker/item?id='+commoditys[int].schoolid+'">' +
+				              '<a href="">' +
 				                '<p>'+commoditys[int].schoolName+'</p>' +
 				              '</a>' +
 				              '<span>查看更多</span>' +
