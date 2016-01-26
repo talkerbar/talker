@@ -52,7 +52,7 @@ function getCommodity(schoolid,sortid){
 	$.ajax({
 		type:'post',
 		url:'/talker/commodity/get',
-		data:'status=1'+'&schoolid='+schoolid+'&sortid='+sortid,
+		data:'status=1'+'&schoolid='+schoolid+'&sortid='+sortid+'&cutSmallImg=true',
 		dataType:'json',
 		success:function(data){
 			var commoditys = data;
@@ -62,7 +62,7 @@ function getCommodity(schoolid,sortid){
 				          '<ul>' +
 				            '<li class="commodity-list-img">' +
 				              '<a title="'+commoditys[int].title+'" href="/talker/item?id='+commoditys[int].id+'">' +
-				                '<img src="/talker/upload/'+commoditys[int].images[0].path+'" alt="">' +
+				                '<img src="/talker/upload/small/'+commoditys[int].images[0].path+'" alt="">' +
 				              '</a>' +
 				            '</li>' +
 				            '<li class="commodity-list-title">' +

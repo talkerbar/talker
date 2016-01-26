@@ -29,7 +29,7 @@ public class Center extends AbstractController{
 	public String commodity(HttpServletRequest request,Model m){
 		Commodity c = new Commodity();
 		c.setUserid(CookieUtil.getCookieInteger(CookieUtil.CookieValue.COOKIE_USER_ID, request));
-		List<Commodity> list = commodityService.getCommodity(c);
+		List<Commodity> list = commodityService.getCommodity(request,c);
 		m.addAttribute("list", list);
 		return "commodity/commodity";
 	}

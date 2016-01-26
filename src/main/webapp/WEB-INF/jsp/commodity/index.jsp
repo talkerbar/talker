@@ -96,14 +96,15 @@
          </p>
        </div>
        <div class="hot-goods-warp-googs">
-           <ul>
-           </ul>
+	        <div class="loading">
+				<img src="/talker/images/loading.gif">
+			</div>
        </div>
      </div>
      <!--  Hot Goods end -->
      
      <!-- 图书馆  -->
-     <div class="floor-warp">
+     <div id="library" class="floor-warp">
        <div class="floor-warp-text">
           <h2 class="inline-block">图书馆</h2>
           <p class="hot-text inline-block"></p>
@@ -120,7 +121,7 @@
 	 </div>
      <!-- 图书馆 -->
      <!-- 车行  -->
-     <div class="floor-warp">
+     <div id="dealers" class="floor-warp">
        <div class="floor-warp-text">
           <h2 class="inline-block">车行</h2>
           <p class="hot-text inline-block"></p>
@@ -137,7 +138,7 @@
 	 </div>
      <!-- 车行 -->
      <!-- 电子城  -->
-     <div class="floor-warp">
+     <div id="electronic-city" class="floor-warp">
        <div class="floor-warp-text">
           <h2 class="inline-block">电子城</h2>
           <p class="hot-text inline-block"></p>
@@ -154,15 +155,6 @@
 	 </div>
      <!-- 电子城 -->
     </div>
-    
-    <!--  bottom ad  -->
-      <div class="bottom-ad-warp">
-       <div>
-         <a href="">
-           <img src="/talker/images/2015ad.jpg" alt="">
-         </a>
-       </div>
-     </div>
     <!-- talker bottom  -->
     <div class="bottom-warp">
       <ul>

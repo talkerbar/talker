@@ -79,8 +79,8 @@
 .hot-goods-warp-googs {
 	width: 1200px;
 	overflow: hidden;
-	border-left: 1px solid #ddd;
-	border-top: 1px solid #ddd;
+	/* border-left: 1px solid #ddd;
+	border-top: 1px solid #ddd; */
 	box-sizing: border-box;
 }
 
@@ -89,15 +89,15 @@
 	float: left;
 	width: 239.8px;
 	height: 239.8px;
-	border-right: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
+	/* border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd; */
 	box-sizing: border-box;
-	padding: 7px;
+	padding: 4px;
 }
 
 .hot-goods-warp-googs li img {
 	width: 100%;
-	border-radius: 4px;
+	/* border-radius: 4px; */
 }
 /* ---------floor------*/
 .floor-warp {
@@ -187,8 +187,8 @@
 	width: 1200px;
 	box-sizing: border-box;
 	margin: 5px auto 0px auto;
-	border-left: 1px solid #ddd;
-	border-top: 1px solid #ddd;
+	border-left: 1px solid #eee;
+	border-top: 1px solid #eee;
 }
 
 .warp-commodity-list {
@@ -199,8 +199,8 @@
 	width: 299.75px;
 	/* height: 400px; */
 	box-sizing: border-box;
-	border-right: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 	float: left;
 }
 
@@ -208,7 +208,7 @@
 	width: 299.75px;
 	height: 299.75px;
 	box-sizing: border-box;
-	border-bottom: 1px solid #ddd;
+	/* border-bottom: 1px solid #ddd; */
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
@@ -253,7 +253,7 @@
 
 .commodity-list-price span:first-child {
 	padding: 0 5px;
-	font-size: 20px;
+	font-size: 22px;
 	color: #ff649d;
 }
 

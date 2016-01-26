@@ -36,7 +36,7 @@ public class Common extends AbstractController{
 	// 商品详情初始化
 	@RequestMapping("item")
 	public String commodityItem(HttpServletRequest request,Commodity c,Model m){
-		List<Commodity> list = commodityService.getCommodity(c);
+		List<Commodity> list = commodityService.getCommodity(request,c);
 		if(list!=null&&!list.isEmpty()){
 			m.addAttribute("commodity", list.get(0));
 		}

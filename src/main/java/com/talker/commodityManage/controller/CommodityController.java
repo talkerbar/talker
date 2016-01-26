@@ -56,8 +56,8 @@ public class CommodityController extends AbstractController {
 	
 	@RequestMapping(value="get")
 	@ResponseBody
-	List<Commodity> getCommodity(Commodity c){
-		return commodityService.getCommodity(c);
+	List<Commodity> getCommodity(HttpServletRequest request,Commodity c){
+		return commodityService.getCommodity(request,c);
 	}
 	
 	@RequestMapping(value="cellnumber")

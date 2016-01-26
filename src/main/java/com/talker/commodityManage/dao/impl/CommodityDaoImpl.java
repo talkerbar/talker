@@ -138,8 +138,8 @@ public class CommodityDaoImpl implements CommodityDao {
 			sql.append(" ORDER BY status,createdate DESC");
 			if(c.getPageNum()!=null){
 				sql.append(" limit ?,?");
-				params.add(c.getBegin());
-				params.add(c.getEnd());
+				params.add(c.beginIndex());
+				params.add(c.getPageSize());
 			}
 		}
 		final List<Commodity> list = new ArrayList<Commodity>();
@@ -199,7 +199,7 @@ public class CommodityDaoImpl implements CommodityDao {
 		return null;
 	}
 	public List<Commodity> getHotCommodity() {
-		String sql = "SELECT c.* FROM (SELECT count(*) as count,v.cid FROM visits v GROUP BY v.cid ORDER BY count desc) temp JOIN commodity c ON temp.cid = c.id LIMIT 0,10";
+		String sql = "SELECT c.* FROM (SELECT count(*) as count,v.cid FROM visits v GROUP BY v.cid ORDER BY count desc) temp JOIN commodity c ON temp.cid = c.id and c.status = 1 LIMIT 0,10";
 		final List<Commodity> list = new ArrayList<Commodity>();
 		jdbcTemplate.query(sql, new RowCallbackHandler() {
 			
@@ -221,11 +221,11 @@ public class CommodityDaoImpl implements CommodityDao {
 				c.setUpdatedate(rs.getDate("updatedate"));
 				c.setStatus(rs.getInt("status"));
 				c.setImages(imagesDao.getImagesForCid(c.getId()));
-				/*c.setUserInfoOut(userInfoDao.getUserInfoForLoginId(rs.getInt("userid")));
+				c.setUserInfoOut(userInfoDao.getUserInfoForLoginId(rs.getInt("userid")));
 				c.setVisits(visitDao.getVisitCountForCid(rs.getInt("id")));
 				if(rs.getInt("schoolid")!=0)
 					c.setSchoolName(sortDao.getSortForId("school",rs.getInt("schoolid")));
-				c.setPhoneRecords(phoneRecordsDao.getPhoneRecordsCountForCid(rs.getInt("id")));*/
+				c.setPhoneRecords(phoneRecordsDao.getPhoneRecordsCountForCid(rs.getInt("id")));
 				list.add(c);
 			}
 		});
