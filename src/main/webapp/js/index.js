@@ -24,13 +24,27 @@ function hotCommodity(){
 			var htm = '<ul>';
 			for ( var int = 0; int < data.length && int < 10; int++) {
 				htm += '<li>' +
+						  '<div class="hover-color-line">' +
+						  '</div>' +
 		                  '<a title = "'+data[int].title+'" href="/talker/item?id='+data[int].id+'">' +
 			                '<img src="/talker/upload/small/'+data[int].images[0].path+'">' +
 			              '</a>' +
-			            '</li>';
+			              '<div class="hot-goods-deta">' +
+			              	'<p>'+data[int].title+'</p>' +
+			              	'<p>'+data[int].schoolName+'</p>' +
+			              	'<p><span class="hot-goods-price">￥'+data[int].newprice+'</span><span>浏览量：'+data[int].visits+'</span></p>' +
+			              '</div>' +
+				        '</li>';
 			}
-			htm += '</ul>';
+				htm += '</ul>';
 			$('.hot-goods-warp-googs').html(htm);
+			//监控鼠标进入热门商品区域显示详情
+		    $('.hover-color-line').bind('mouseover',function(){
+		    	$(this).siblings('.hot-goods-deta').show();
+		    });
+		    $('.hover-color-line').bind('mouseout',function(){
+		    	$(this).siblings('.hot-goods-deta').hide();
+		    });
 		},
 		error:function(){
 			alert("获取热门商品失败");
@@ -63,7 +77,7 @@ function getCommodity(sortid){
 				              '<span>￥'+commoditys[int].newprice+'</span><span><s>￥'+commoditys[int].oldprice+'</s></span>' +
 				            '</li>' +
 				            '<li class="commodity-list-school">' +
-				              '<a href="/talker/item?id='+commoditys[int].schoolid+'">' +
+				              '<a href="#">' +
 				                '<p>'+commoditys[int].schoolName+'</p>' +
 				              '</a>' +
 				              '<span>查看更多</span>' +

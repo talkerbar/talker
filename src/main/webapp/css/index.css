@@ -78,26 +78,66 @@
 
 .hot-goods-warp-googs {
 	width: 1200px;
-	overflow: hidden;
+	height:480px;
+	/* overflow: hidden; */
 	/* border-left: 1px solid #ddd;
 	border-top: 1px solid #ddd; */
 	box-sizing: border-box;
 }
 
 .hot-goods-warp-googs li {
+	position:relative;
 	list-style: none;
 	float: left;
 	width: 239.8px;
 	height: 239.8px;
-	/* border-right: 1px solid #ddd;
-	border-bottom: 1px solid #ddd; */
 	box-sizing: border-box;
 	padding: 4px;
+	cursor: pointer;
 }
 
 .hot-goods-warp-googs li img {
 	width: 100%;
 	/* border-radius: 4px; */
+}
+
+.hot-goods-deta{
+	display:none;
+	position: absolute;
+	width:232px;
+	height: 90px;
+	background: #fff;
+	bottom:-86px;
+	left:4px;
+	z-index:1;
+}
+
+.hot-goods-deta > p{
+	height: 26px;
+	line-height: 26px;
+	font-size:16px;
+}
+.hot-goods-deta span{
+	display: block;
+	float: left;
+	width: 50%;
+}
+.hot-goods-price{
+	color:#ff649d;
+	font-size: 22px;
+}
+
+.hover-color-line{
+	position: absolute;
+	top:3px;
+	left:3px;
+	width:232px;
+	height:232px;
+	z-index:2;
+}
+.hover-color-line:hover{
+	border: 1px solid #bbb;
+	height: 322px;
 }
 /* ---------floor------*/
 .floor-warp {
