@@ -22,7 +22,7 @@ function hotCommodity(){
 		dataType:'json',
 		success:function(data){
 			var htm = '<ul>';
-			for ( var int = 0; int < data.length && int < 10; int++) {
+			for ( var int = 0; int < data.length; int++) {
 				htm += '<li>' +
 						  '<div class="hover-color-line">' +
 						  '</div>' +
@@ -82,20 +82,10 @@ function getCommodity(sortid){
 				              '</a>' +
 				              '<span>查看更多</span>' +
 				            '</li>' +
-//				            '<li class="commodity-list-user">' +
-//				              '<div class="commodity-list-user-head">' +
-//				                '<img src="/talker/head/'+commoditys[int].userInfoOut.icon+'" alt="">' +
-//				              '</div>' +
-//				              '<div class="commodity-list-user-nickname">'+commoditys[int].userInfoOut.nickname+'</div>' +
-//				              '<div class="commodity-list-user-data">浏览量：'+commoditys[int].visits+'</div>' +
-//				            '</li>' +
 				          '</ul>' +
 				        '</div>';
 			}
 			$('.warp-commodity-list').html(htm);
-		},
-		error:function(){
-			alert("获取商品失败");
 		}
 	});
 }

@@ -39,6 +39,8 @@ public class Commodity implements Serializable{
     private Integer pageSize;        // 每页数据条数
     private Integer pageNum;		 // 当前页码
     private boolean cutSmallImg;     // 是否需要剪切小图
+    // 需要查询多个分类的字段
+    private String sortidmore;       // 多个id用|分割
     
 	public Commodity() {
 		super();
@@ -242,6 +244,13 @@ public class Commodity implements Serializable{
 
 	public void setCutSmallImg(boolean cutSmallImg) {
 		this.cutSmallImg = cutSmallImg;
+	}
+	public String getSortidmore() {
+		return sortidmore;
+	}
+
+	public void setSortidmore(String sortidmore) {
+		this.sortidmore = sortidmore;
 	}
 
 	/**
