@@ -111,7 +111,7 @@
        </div>
 		<!-- 商品列表开始 -->
 		<div class="warp-commodity">
-			<div class="warp-commodity-list">
+			<div class="warp-commodity-list library">
 				<div class="loading">
 					<img src="/talker/images/loading.gif">
 				</div>
@@ -128,7 +128,7 @@
        </div>
 		<!-- 商品列表开始 -->
 		<div class="warp-commodity">
-			<div class="warp-commodity-list">
+			<div class="warp-commodity-list dealers">
 				<div class="loading">
 					<img src="/talker/images/loading.gif">
 				</div>
@@ -145,7 +145,7 @@
        </div>
 		<!-- 商品列表开始 -->
 		<div class="warp-commodity">
-			<div class="warp-commodity-list">
+			<div class="warp-commodity-list electronic-city">
 				<div class="loading">
 					<img src="/talker/images/loading.gif">
 				</div>

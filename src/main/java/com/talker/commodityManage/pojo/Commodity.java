@@ -40,7 +40,7 @@ public class Commodity implements Serializable{
     private Integer pageNum;		 // 当前页码
     private boolean cutSmallImg;     // 是否需要剪切小图
     // 需要查询多个分类的字段
-    private String sortidmore;       // 多个id用|分割
+    private String sortidmore;       // 多个id用,分割
     
 	public Commodity() {
 		super();

@@ -13,7 +13,12 @@ $(function(){
     });
     //获取热门商品
     hotCommodity();
-    getCommodity('');
+    //图书馆
+    getCommodity('71','.library');
+    //车行
+    getCommodity('79,80,81','.dealers');
+    //电子城
+    getCommodity('30,34,40','.electronic-city');
 });
 function hotCommodity(){
 	$.ajax({
@@ -51,11 +56,11 @@ function hotCommodity(){
 		}
 	});
 }
-function getCommodity(sortid){
+function getCommodity(sortid,dom){
 	$.ajax({
 		type:'post',
 		url:'/talker/commodity/get',
-		data:'status=1'+'&sortid='+sortid+'&cutSmallImg=true'+'&pageNum=1&pageSize=8',
+		data:'status=1'+'&sortidmore='+sortid+'&cutSmallImg=true'+'&pageNum=1&pageSize=8',
 		dataType:'json',
 		success:function(data){
 			var commoditys = data;
@@ -85,7 +90,7 @@ function getCommodity(sortid){
 				          '</ul>' +
 				        '</div>';
 			}
-			$('.warp-commodity-list').html(htm);
+			$(dom).html(htm);
 		}
 	});
 }
