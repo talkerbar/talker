@@ -119,7 +119,7 @@ public class CommodityDaoImpl implements CommodityDao {
 				sql.append(" and sortid = ?");
 				params.add(c.getSortid());
 			}
-			if(c.getSortidmore()!=null){
+			if(c.getSortidmore()!=null && !c.getSortidmore().equals("")){
 				sql.append(" and sortid in (");
 				sql.append(c.getSortidmore());
 				sql.append(")");

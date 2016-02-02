@@ -7,7 +7,7 @@
 <title>主页面</title>
 <script src="/talker/js/jquery.min.js"></script>
 <script type="text/javascript">
-	window.location.href="/talker/index";
+	window.location.href="/talker/public/index";
 </script>
 </head>
 <body>

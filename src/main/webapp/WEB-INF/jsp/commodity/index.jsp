@@ -18,7 +18,7 @@
 		<div class="top-warp-top">
 			<ul>
 				<li id="top-warp-top-left"></li>
-			 	<li id="top-warp-top-right"><span><a href="/talker/login">登陆</a></span><span><a href="/talker/regist">注册</a></span></li>
+			 	<li id="top-warp-top-right"><span><a href="/talker/public/login">登陆</a></span><span><a href="/talker/public/regist">注册</a></span></li>
 			</ul>
 		</div>
 		<div class="top-warp-center">
@@ -42,13 +42,13 @@
 		<div class="top-warp-bottom">
   			<div class="all-sort-warp">
 	            <ul>
-	              <li id="sort-first">全部商品分类<span class="all-sort"></span></li>
-	              <li>手机/电脑/电脑配件</li>
-	              <li>摩托车/电动车/自行车</li>
-	              <li>数码3C产品</li>
-	              <li>书籍/书刊音像/文体用品</li>
-	              <li>相机/摄像机</li>
-	              <li>其他闲置</li>
+	              <li id="sort-first"><a href="/talker/public/list" target="_blank">全部商品分类</a><span class="all-sort"></span></li>
+	              <li><a href="/talker/public/mobile-computers" target="_blank">手机/电脑/电脑配件</a></li>
+	              <li><a href="/talker/public/car" target="_blank">摩托车/电动车/自行车</a></li>
+	              <li><a href="/talker/public/digital-3c" target="_blank">数码3C产品</a></li>
+	              <li><a href="/talker/public/books" target="_blank">书籍/书刊音像/文体用品</a></li>
+	              <li><a href="/talker/public/camera" target="_blank">相机/摄像机</a></li>
+	              <li><a href="/talker/public/other" target="_blank">其他闲置</a></li>
 	            </ul>   
 	         </div>
 	         <div class="nav-items">
@@ -64,7 +64,7 @@
     <div class="rotation-warp swiper-container swiper-container-tab">
     	<ul id="rotation-warp-ul"  class="swiper-wrapper">
 	        <li class="swiper-slide">
-	          <a href="/talker/list">
+	          <a href="#">
 	            <img src="/talker/images/1.jpg" alt="">
 	          </a>
 	        </li>
@@ -118,6 +118,9 @@
 			</div>
 		</div>
 		<!-- 商品列表结束 -->
+		<div class="more-commodity">
+			<a>更多书籍，点击查看</a>
+		</div>
 	 </div>
      <!-- 图书馆 -->
      <!-- 车行  -->
@@ -135,6 +138,9 @@
 			</div>
 		</div>
 		<!-- 商品列表结束 -->
+		<div class="more-commodity">
+			<a>更多交通工具，点击查看</a>
+		</div>
 	 </div>
      <!-- 车行 -->
      <!-- 电子城  -->
@@ -152,6 +158,9 @@
 			</div>
 		</div>
 		<!-- 商品列表结束 -->
+		<div class="more-commodity">
+			<a>更多电子产品，点击查看</a>
+		</div>
 	 </div>
      <!-- 电子城 -->
     </div>

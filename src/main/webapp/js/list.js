@@ -1,5 +1,12 @@
 $(function(){
 	//得到所有学校
+	getAllSchool();
+	//得到所有分类
+	getAllSort();
+	//初始化商品
+	getCommodity("",$('#sortidmore').val());
+});
+function getAllSchool(){
 	$.ajax({
 		type:'post',
 		url:'/talker/commodity/allschoolname',
@@ -17,12 +24,10 @@ $(function(){
 				loading();
 				getCommodity(schoolid,sortid);
 			});
-		},
-		error:function(){
-			
 		}
 	});
-	//得到所有分类
+}
+function getAllSort(){
 	$.ajax({
 		type:'post',
 		url:'/talker/commodity/allsortname',
@@ -40,19 +45,14 @@ $(function(){
 				loading();
 				getCommodity(schoolid,sortid);
 			});
-		},
-		error:function(){
-			
 		}
 	});
-	//初始化商品
-	getCommodity("","");
-});
+}
 function getCommodity(schoolid,sortid){
 	$.ajax({
 		type:'post',
 		url:'/talker/commodity/get',
-		data:'status=1'+'&schoolid='+schoolid+'&sortid='+sortid+'&cutSmallImg=true',
+		data:'status=1'+'&schoolid='+schoolid+'&sortidmore='+sortid+'&cutSmallImg=true',
 		dataType:'json',
 		success:function(data){
 			var commoditys = data;
@@ -61,12 +61,12 @@ function getCommodity(schoolid,sortid){
 				htm += '<div class="commodity-list">' +
 				          '<ul>' +
 				            '<li class="commodity-list-img">' +
-				              '<a title="'+commoditys[int].title+'" href="/talker/item?id='+commoditys[int].id+'">' +
+				              '<a title="'+commoditys[int].title+'" href="/talker/public/item?id='+commoditys[int].id+'">' +
 				                '<img src="/talker/upload/small/'+commoditys[int].images[0].path+'" alt="">' +
 				              '</a>' +
 				            '</li>' +
 				            '<li class="commodity-list-title">' +
-				              '<a title="'+commoditys[int].title+'" href="/talker/item?id='+commoditys[int].id+'">' +
+				              '<a title="'+commoditys[int].title+'" href="/talker/public/item?id='+commoditys[int].id+'">' +
 				                '<p>'+commoditys[int].title+'</p>' +
 				              '</a>' +
 				            '</li>' +

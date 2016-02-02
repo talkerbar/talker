@@ -10,8 +10,8 @@
 }
 .warp-school-sort li{
    float: left;
-   height: 40px;
-   line-height: 40px;
+   height: 36px;
+   line-height: 36px;
    padding: 0px 20px;
    cursor: pointer;
 }
@@ -28,8 +28,8 @@
 }
 .warp-school-title,.warp-sort-title{
   width: 100px;
-  height: 40px;
-  line-height: 40px;
+  height: 36px;
+  line-height: 36px;
   text-align: center;
   font-size: 16px;
   font-weight: bolder;
@@ -37,7 +37,7 @@
 }
 .warp-school-con,.warp-sort-con{
   width: 1099px;
-  min-height:40px;
+  min-height:36px;
   border-left: 1px solid #ddd;
 }
 
