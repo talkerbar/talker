@@ -7,6 +7,10 @@
 ul,li{
 	list-style: none;
 }
+a{
+	text-decoration: none;
+	color:#666;
+}
 /* head */
 .warp-login-head{
 	width: 1000px;

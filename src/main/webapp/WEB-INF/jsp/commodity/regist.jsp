@@ -26,7 +26,7 @@
 					<ul>
 						<li class="desc">
 							<span>免费注册</span>
-							<span>登录</span>
+							<span><a href="/talker/public/login">登录</a></span>
 						</li>
 						<li class="regist info">
 							<span class="icon-username icon"></span>

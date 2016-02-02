@@ -38,7 +38,7 @@
 			</li>
 		</ul>
 		<div class="info-foot">
-			<a href="">跳过</a>
+			<a href="/talker">跳过</a>
 			<button class="info-submit">完成</button>
 		</div>
 	</div>
