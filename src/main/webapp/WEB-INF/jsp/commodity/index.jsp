@@ -53,9 +53,9 @@
 	         </div>
 	         <div class="nav-items">
 	              <ul>
-	                <li>首页</li>
-	                <li>我要买</li>
-	                <li>我要卖</li>
+	                <li><a href="/talker/public/index">首页</a></li>
+	                <li><a href="/talker/public/list" target="_blank">我要买</a></li>
+	                <li><a href="/talker/center/release">我要卖</a></li>
 	              </ul>
 	         </div>
 		</div>
@@ -119,7 +119,7 @@
 		</div>
 		<!-- 商品列表结束 -->
 		<div class="more-commodity">
-			<a>更多书籍，点击查看</a>
+			<a href="/talker/public/books" target="_blank">更多书籍，点击查看</a>
 		</div>
 	 </div>
      <!-- 图书馆 -->
@@ -139,7 +139,7 @@
 		</div>
 		<!-- 商品列表结束 -->
 		<div class="more-commodity">
-			<a>更多交通工具，点击查看</a>
+			<a href="/talker/public/car" target="_blank">更多交通工具，点击查看</a>
 		</div>
 	 </div>
      <!-- 车行 -->
@@ -159,7 +159,7 @@
 		</div>
 		<!-- 商品列表结束 -->
 		<div class="more-commodity">
-			<a>更多电子产品，点击查看</a>
+			<a href="/talker/public/mobile-computers" target="_blank">更多电子产品，点击查看</a>
 		</div>
 	 </div>
      <!-- 电子城 -->

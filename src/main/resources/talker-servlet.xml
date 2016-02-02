@@ -34,7 +34,7 @@
 	              </property>
 	              <!-- 登录URL -->
 	              <property name="login">
-	                 <value>/login</value>
+	                 <value>/public/login</value>
 	              </property>
 	            </bean>
 	        </mvc:interceptor>

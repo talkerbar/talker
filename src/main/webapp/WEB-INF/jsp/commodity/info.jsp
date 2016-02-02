@@ -18,33 +18,33 @@
   </head>
   <body>
   	<!-- Top Begin -->
-  	<div class="top-warp">
-  		<div class="top-warp-top">
-  			<ul>
-  				<li id="top-warp-top-left"></li><!--
-  			 --><li id="top-warp-top-right"><span><a href="/talker/login">登陆</a></span><span>注册</span></li>
-  			</ul>
-  		</div>
-  		<div class="top-warp-center">
-  			 <ul>
-  			 	<li class="top-warp-center-left">
-  			 		<div><a href="/talker"><img src="" alt="logo" id="logo"></a></div>
-  			 		<div><img src="" alt="slogan" id="slogan"></div>
-  			 	</li><!--
-         --><li class="top-warp-center-center">
-               <div>
-	               <input type="text" name="key" id="key"><!--
-	            --><span id="search">搜索</span>
-         		</div>
-          </li><!--
-  			 --><li class="top-warp-center-right">
-  			 		<div><a href="center.html">个人中心</a></div>
-  			 		<div><a href="">出售商品</a></div>
-  			 	</li>
-  			 </ul>
-  		</div>
-  		<div class="top-warp-bottom list-top-special">
-    		<div class="all-sort-warp">
+	<div class="top-warp">
+		<div class="top-warp-top">
+			<ul>
+				<li id="top-warp-top-left"></li>
+			 	<li id="top-warp-top-right"><span><a href="/talker/public/login">登陆</a></span><span><a href="/talker/public/regist">注册</a></span></li>
+			</ul>
+		</div>
+		<div class="top-warp-center">
+			 <ul>
+			 	<li class="top-warp-center-left">
+			 		<div><a href="/talker"><img src="" alt="logo" id="logo"></a></div>
+			 		<div><img src="" alt="slogan" id="slogan"></div>
+			 	</li><!--
+       --><li class="top-warp-center-center">
+             <div>
+               <input type="text" name="key" id="key"><!--
+            --><span id="search">搜索</span>
+        	 </div>
+        </li><!--
+			 --><li class="top-warp-center-right">
+			 		<div><a href="/talker/center/commodity">个人中心</a></div>
+			 		<div><a href="/talker/center/release">出售商品</a></div>
+			 	</li>
+			 </ul>
+		</div>
+		<div class="top-warp-bottom list-top-special">
+  			<div class="all-sort-warp all-sort-special">
 	            <ul>
 	              <li id="sort-first"><a href="/talker/public/list" target="_blank">全部商品分类</a><span class="all-sort"></span></li>
 	              <li><a href="/talker/public/mobile-computers" target="_blank">手机/电脑/电脑配件</a></li>
@@ -57,14 +57,14 @@
 	         </div>
 	         <div class="nav-items">
 	              <ul>
-	                <li>首页</li>
-	                <li>我要买</li>
-	                <li>我要卖</li>
+	                <li><a href="/talker/public/index">首页</a></li>
+	                <li><a href="/talker/public/list" target="_blank">我要买</a></li>
+	                <li><a href="/talker/center/release">我要卖</a></li>
 	              </ul>
 	         </div>
-  		</div>
-  	</div>
-  	<!-- Top End -->
+		</div>
+	</div>
+	<!-- Top End -->
     <div class="warp-center">
       <div class="warp-center-nav floatLeft">
         <div class="head-img">
