@@ -16,7 +16,7 @@
 			<a href="" class="logo">
 				<img src="" alt="logo">
 			</a>
-			<a href="talker/index" class="index">
+			<a href="talker" class="index">
 				<span>返回首页</span>
 			</a>
 		</div>

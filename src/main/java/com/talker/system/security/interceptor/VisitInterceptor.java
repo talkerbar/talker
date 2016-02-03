@@ -50,7 +50,7 @@ public class VisitInterceptor extends HandlerInterceptorAdapter {
 	@Override
 	public boolean preHandle(HttpServletRequest request,HttpServletResponse response, Object handler) throws Exception {
 		String uri = request.getServletPath();
-		if("/item".equals(uri)){
+		if("/public/item".equals(uri)){
 			//记录商品浏览记录
 			String cid = request.getParameter("id");
 			if(cid!=null){

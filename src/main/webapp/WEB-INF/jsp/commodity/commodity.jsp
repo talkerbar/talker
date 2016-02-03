@@ -81,10 +81,10 @@
 	      <c:forEach var="data" items="${list }">
 	        <div class="warp-commodity-list floatLeft">
 	            <div class="warp-commodity-list-img floatLeft">
-		            <a title="${data.title }" href="/talker/item?id=${data.id }"><img src="/talker/upload/${data.images[0].path }"></a>
+		            <a title="${data.title }" href="/talker/public/item?id=${data.id }"><img src="/talker/upload/${data.images[0].path }"></a>
 	            </div>
 	            <div class="warp-commodity-list-onfo floatLeft">
-	              <p class="title"><a title="${data.title }" href="/talker/item?id=${data.id }">${data.title }</a></p>
+	              <p class="title"><a title="${data.title }" href="/talker/public/item?id=${data.id }">${data.title }</a></p>
 	              <p class="price"><b class="opacity">￥</b><b class="color">${data.newprice }</b></p>
 	              <p class="viewinfo"><span>浏览：${data.visits }</span><span>电话：${data.phoneRecords }</span><span>留言：0</span></p>
 	            </div>
