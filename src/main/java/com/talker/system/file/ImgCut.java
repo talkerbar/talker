@@ -28,7 +28,7 @@ public class ImgCut {
 			if(!tag.exists()&&sou.exists()){
 				// 取得图片读入器
 				Iterator<ImageReader> readers = ImageIO
-						.getImageReadersByFormatName("png");
+						.getImageReadersByFormatName("jpg");
 				ImageReader reader = (ImageReader) readers.next();
 				// 取得图片读入流
 				InputStream source = new FileInputStream(upload+File.separator+src);
@@ -48,7 +48,7 @@ public class ImgCut {
 				Rectangle rect = new Rectangle(left, top, width>height?height:width, width>height?height:width);
 				param.setSourceRegion(rect);
 				BufferedImage bi = reader.read(0, param);
-				ImageIO.write(bi,"png",tag);
+				ImageIO.write(bi,"jpg",tag);
 			}
 		} catch (Exception e) {
 			log.error("剪切图片出现异常", e);

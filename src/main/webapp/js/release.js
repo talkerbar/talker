@@ -44,7 +44,8 @@ $(function() {
     		flag = false;
     	}
     	var newprice = $('#newprice').val();
-    	if(newprice==''){
+    	var oldprice = $('#oldprice').val();
+    	if(newprice==''||oldprice==''){
     		$('#newprice').addClass('errorinput').siblings('.inputTip').show();
     		flag = false;
     	}

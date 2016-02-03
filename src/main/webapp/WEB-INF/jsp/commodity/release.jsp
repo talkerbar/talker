@@ -116,7 +116,7 @@
                </label>
                <input type="text" id="newprice" name="newprice" placeholder="转卖价(元)">
                <input type="text" id="oldprice" name="oldprice" placeholder="原价(元)">
-               <span class="inputTip">请输入转卖价</span>
+               <span class="inputTip">请输入价格</span>
              </li>
              <li>
                <label>
