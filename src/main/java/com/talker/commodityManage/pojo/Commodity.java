@@ -36,7 +36,7 @@ public class Commodity implements Serializable{
     private Integer visits;          // 商品浏览量
     private String schoolName;       // 商品所在学校
     private Integer phoneRecords;    // 获取电话次数
-    private Integer pageSize;        // 每页数据条数
+    private Integer pageSize = 40;   // 每页数据条数
     private Integer pageNum;		 // 当前页码
     private boolean cutSmallImg;     // 是否需要剪切小图
     // 需要查询多个分类的字段

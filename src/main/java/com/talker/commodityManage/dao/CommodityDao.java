@@ -61,4 +61,12 @@ public interface CommodityDao {
 	 * 返回值  : List<Commodity>
 	 */
 	List<Commodity> getHotCommodity();
+	/**
+	 * 方法名: getCount
+	 * 说明 :  得到符合条件的总行数
+	 * 创建人 :   zdd       
+	 * 创建时间 : 2016-2-3 下午3:55:02 
+	 * 返回值  : int
+	 */
+	int getCount(Commodity c);
 }

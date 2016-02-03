@@ -6,9 +6,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   	<title>商品列表-大学生生活服务平台</title>
   	<script src="/talker/js/jquery.min.js"></script>
+  	<script src="/talker/js/page/jquery.page.js"></script>
   	<script src="/talker/js/list.js"></script>
     <link rel="stylesheet" href="/talker/css/common.css">
-    <link rel="stylesheet" href="/talker/css/list.css?v=1.0">
+    <link rel="stylesheet" href="/talker/css/list.css">
+    <link rel="stylesheet" href="/talker/css/page.css">
   </head>
   <body>
   	<!-- Top Begin -->
@@ -107,7 +109,15 @@
       </div>
     </div>
     <!-- 商品列表结束 -->
+    
+    <!-- 分页开始  -->
+    <div class="tcdPageCode"></div>
+    <!-- 分页结束 -->
+    
+    <!-- 参数  -->
 	<input type="hidden" id="sortidmore" value="${sortidmore}"/>
+	<input type="hidden" id="schoolidmore"/>
+	
     <!-- talker bottom  -->
     <div class="bottom-warp">
       <ul>

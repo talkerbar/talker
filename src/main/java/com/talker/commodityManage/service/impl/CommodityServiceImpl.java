@@ -14,6 +14,7 @@ import com.talker.commodityManage.dao.CommodityDao;
 import com.talker.commodityManage.dao.ImagesDao;
 import com.talker.commodityManage.pojo.Commodity;
 import com.talker.commodityManage.pojo.Images;
+import com.talker.commodityManage.pojo.Page;
 import com.talker.commodityManage.service.CommodityService;
 import com.talker.sortManage.pojo.Sort;
 import com.talker.system.file.ImgCut;
@@ -118,6 +119,49 @@ public class CommodityServiceImpl implements CommodityService {
 		}
 		return list;
 	}
+
+	public Page getCommodityPage(HttpServletRequest request, Commodity c) {
+		List<Commodity> list = commodityDao.getCommodity(c);
+		int pageCount = this.getPageCount(commodityDao.getCount(c), c.getPageSize());
+		for (Commodity commodity : list) {
+			if(!commodity.getImages().isEmpty()){
+				ImgCut.readUsingImageReader(request, commodity.getImages().get(0).getPath());
+			}
+		}
+		return Page.buildPage(c.getPageNum(), pageCount, list);
+	}
+
+	public List<Sort> getAllSchoolName() {
+		return commodityDao.getAllSchoolName();
+	}
+
+	public List<Sort> getAllSortName() {
+		return commodityDao.getAllSortName();
+	}
+
+	public Commodity getCommodityForId(int id) {
+		if(id!=0){
+			return commodityDao.getCommodityForId(id);
+		}
+		return null;
+	}
+
+	public List<Commodity> getHotCommodity(HttpServletRequest request) {
+		List<Commodity> hotList =  commodityDao.getHotCommodity();
+		for (Commodity commodity : hotList) {
+			if(!commodity.getImages().isEmpty()){
+				ImgCut.readUsingImageReader(request, commodity.getImages().get(0).getPath());
+			}
+		}
+		return hotList;
+	}
+
+	public String getCellnumber(int id) {
+		if(id==0){
+			return null;
+		}
+		return commodityDao.getCellnumber(id);
+	}
 	
 	// 添加商品参数检测
 	private boolean checkCommodityParams(String[] file, Commodity c) {
@@ -163,35 +207,7 @@ public class CommodityServiceImpl implements CommodityService {
 		return true;
 	}
 
-	public String getCellnumber(int id) {
-		if(id==0){
-			return null;
-		}
-		return commodityDao.getCellnumber(id);
-	}
-
-	public List<Sort> getAllSchoolName() {
-		return commodityDao.getAllSchoolName();
-	}
-
-	public List<Sort> getAllSortName() {
-		return commodityDao.getAllSortName();
-	}
-
-	public Commodity getCommodityForId(int id) {
-		if(id!=0){
-			return commodityDao.getCommodityForId(id);
-		}
-		return null;
-	}
-
-	public List<Commodity> getHotCommodity(HttpServletRequest request) {
-		List<Commodity> hotList =  commodityDao.getHotCommodity();
-		for (Commodity commodity : hotList) {
-			if(!commodity.getImages().isEmpty()){
-				ImgCut.readUsingImageReader(request, commodity.getImages().get(0).getPath());
-			}
-		}
-		return hotList;
+	private int getPageCount(int commodityCount,int pageSize){
+		return (commodityCount + pageSize -1)/pageSize;
 	}
 }

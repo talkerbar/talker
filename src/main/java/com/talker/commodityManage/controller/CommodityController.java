@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.talker.commodityManage.pojo.Commodity;
+import com.talker.commodityManage.pojo.Page;
 import com.talker.commodityManage.service.CommodityService;
 import com.talker.sortManage.pojo.Sort;
 import com.talker.system.controller.AbstractController;
@@ -58,6 +59,12 @@ public class CommodityController extends AbstractController {
 	@ResponseBody
 	List<Commodity> getCommodity(HttpServletRequest request,Commodity c){
 		return commodityService.getCommodity(request,c);
+	}
+	
+	@RequestMapping(value="page")
+	@ResponseBody
+	public Page getCommodityPage(HttpServletRequest request, Commodity c){
+		return commodityService.getCommodityPage(request, c);
 	}
 	
 	@RequestMapping(value="cellnumber")

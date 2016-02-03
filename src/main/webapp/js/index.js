@@ -16,9 +16,9 @@ $(function(){
     //图书馆
     getCommodity('71','.library');
     //车行
-    getCommodity('79,80,81','.dealers');
+    getCommodity('79,80,81,82,83,84','.dealers');
     //电子城
-    getCommodity('30,34,40','.electronic-city');
+    getCommodity('30,31,40,41,42,43,44,45,46','.electronic-city');
 });
 function hotCommodity(){
 	$.ajax({

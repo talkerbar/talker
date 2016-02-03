@@ -1,13 +1,13 @@
 $(function() {
 	//获取焦点隐藏提示
-	$('.userinfo input[type=text]:not("#oldprice")').bind('focus',function(){
+	$('.userinfo input[type=text]').bind('focus',function(){
 		$(this).removeClass('errorinput').siblings('.inputTip').hide();
 	});
 	$('.userinfo input[type=file]').bind('click',function(){
 		$('#upImage > img').removeClass('errorinput');
 	});
 	//失去焦点校验信息
-	$('.userinfo input[type=text]:not("#oldprice")').bind('blur',function(){
+	$('.userinfo input[type=text]').bind('blur',function(){
 		if($(this).val()==''){
 			$(this).addClass('errorinput').siblings('.inputTip').show();
 		}
@@ -44,9 +44,13 @@ $(function() {
     		flag = false;
     	}
     	var newprice = $('#newprice').val();
-    	var oldprice = $('#oldprice').val();
-    	if(newprice==''||oldprice==''){
+    	if(newprice==''){
     		$('#newprice').addClass('errorinput').siblings('.inputTip').show();
+    		flag = false;
+    	}
+    	var oldprice = $('#oldprice').val();
+    	if(oldprice==''){
+    		$('#oldprice').addClass('errorinput').siblings('.inputTip').show();
     		flag = false;
     	}
     	var cellnumber = $('#cellnumber').val();

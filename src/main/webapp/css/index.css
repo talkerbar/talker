@@ -78,7 +78,7 @@
 
 .hot-goods-warp-googs {
 	width: 1200px;
-	height:480px;
+	height: 480px;
 	/* overflow: hidden; */
 	/* border-left: 1px solid #ddd;
 	border-top: 1px solid #ddd; */
@@ -86,7 +86,7 @@
 }
 
 .hot-goods-warp-googs li {
-	position:relative;
+	position: relative;
 	list-style: none;
 	float: left;
 	width: 239.8px;
@@ -101,44 +101,51 @@
 	/* border-radius: 4px; */
 }
 
-.hot-goods-deta{
-	display:none;
+.hot-goods-deta {
+	display: none;
 	position: absolute;
-	width:232px;
+	width: 232px;
 	height: 90px;
 	background: #fff;
-	bottom:-86px;
-	left:4px;
-	z-index:1;
+	bottom: -86px;
+	left: 4px;
+	z-index: 1;
 }
 
-.hot-goods-deta > p{
+.hot-goods-deta>p {
 	height: 26px;
 	line-height: 26px;
-	font-size:16px;
+	font-size: 16px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
-.hot-goods-deta span{
+
+.hot-goods-deta span {
 	display: block;
 	float: left;
 	width: 50%;
 }
-.hot-goods-price{
-	color:#ff649d;
+
+.hot-goods-price {
+	color: #ff649d;
 	font-size: 22px;
 }
 
-.hover-color-line{
+.hover-color-line {
 	position: absolute;
-	top:3px;
-	left:3px;
-	width:232px;
-	height:232px;
-}
-.hover-color-line > a{
-	width:232px;
+	top: 3px;
+	left: 3px;
+	width: 232px;
 	height: 232px;
 }
-.hover-color-line:hover{
+
+.hover-color-line>a {
+	width: 232px;
+	height: 232px;
+}
+
+.hover-color-line:hover {
 	border: 1px solid #bbb;
 	height: 322px;
 }
@@ -365,20 +372,22 @@
 	width: 400px;
 }
 /* loading */
-.more-commodity{
+.more-commodity {
 	width: 100%;
-	height:38px;
-	line-height:38px;
-	text-align:center;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
 	background: #eee;
 	cursor: pointer;
 	font-size: 15px;
-	border-bottom-left-radius:4px;
-	border-bottom-right-radius:4px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
 }
-.more-commodity > a{
+
+.more-commodity>a {
 	display: block;
 }
-.more-commodity:hover{
+
+.more-commodity:hover {
 	background: #ddd;
 }

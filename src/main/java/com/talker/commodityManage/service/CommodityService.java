@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import com.talker.commodityManage.pojo.Commodity;
+import com.talker.commodityManage.pojo.Page;
 import com.talker.sortManage.pojo.Sort;
 import com.talker.util.ResponseModel;
 
@@ -21,6 +22,14 @@ public interface CommodityService {
 	 * 返回值  : List<Commodity>
 	 */
 	List<Commodity> getCommodity(HttpServletRequest request,Commodity c);
+	/**
+	 * 方法名: getCommodityPage
+	 * 说明 :  分页查询
+	 * 创建人 :   zdd       
+	 * 创建时间 : 2016-2-3 下午4:02:31 
+	 * 返回值  : Page
+	 */
+	Page getCommodityPage(HttpServletRequest request,Commodity c);
 	/**
 	 * 方法名: getCellnumber
 	 * 说明 :  根据商品ID得到手机号

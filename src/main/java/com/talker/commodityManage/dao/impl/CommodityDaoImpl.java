@@ -236,5 +236,42 @@ public class CommodityDaoImpl implements CommodityDao {
 		});
 		return list;
 	}
+	@SuppressWarnings("deprecation")
+	public int getCount(Commodity c) {
+		StringBuffer sql = new StringBuffer("select count(*) from commodity where status <> 3");
+		List<Object> params = new ArrayList<Object>();
+		if(c!=null){
+			if(c.getId()!=0){
+				sql.append(" and id = ?");
+				params.add(c.getId());
+			}
+			if(c.getSortid()!=null){
+				sql.append(" and sortid = ?");
+				params.add(c.getSortid());
+			}
+			if(c.getSortidmore()!=null && !c.getSortidmore().equals("")){
+				sql.append(" and sortid in (");
+				sql.append(c.getSortidmore());
+				sql.append(")");
+			}
+			if(c.getCellnumber()!=null){
+				sql.append(" and cellnumber = ?");
+				params.add(c.getCellnumber());
+			}
+			if(c.getSchoolid()!=null){
+				sql.append(" and schoolid = ?");
+				params.add(c.getSchoolid());
+			}
+			if(c.getUserid()!=null){
+				sql.append(" and userid = ?");
+				params.add(c.getUserid());
+			}
+			if(c.getStatus()!=null){
+				sql.append(" and status = ?");
+				params.add(c.getStatus());
+			}
+		}
+		return jdbcTemplate.queryForInt(sql.toString(), params.toArray());
+	}
 
 }

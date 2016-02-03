@@ -4,7 +4,7 @@ $(function(){
 	//得到所有分类
 	getAllSort();
 	//初始化商品
-	getCommodity("",$('#sortidmore').val());
+	getCommodity("",$('#sortidmore').val(),'1');
 });
 function getAllSchool(){
 	$.ajax({
@@ -22,7 +22,8 @@ function getAllSchool(){
 				var schoolid = $('#all-school-name').find('li.current-sort').attr('id');
 				var sortid = $('#all-sort-name').find('li.current-sort').attr('id');
 				loading();
-				getCommodity(schoolid,sortid);
+				getCommodity(schoolid,sortid,"1");
+				$('#schoolidmore').val(schoolid);
 			});
 		}
 	});
@@ -43,19 +44,20 @@ function getAllSort(){
 				var schoolid = $('#all-school-name').find('li.current-sort').attr('id');
 				var sortid = $('#all-sort-name').find('li.current-sort').attr('id');
 				loading();
-				getCommodity(schoolid,sortid);
+				getCommodity(schoolid,sortid,"1");
+				$('#sortidmore').val(sortid);
 			});
 		}
 	});
 }
-function getCommodity(schoolid,sortid){
+function getCommodity(schoolid,sortid,page){
 	$.ajax({
 		type:'post',
-		url:'/talker/commodity/get',
-		data:'status=1'+'&schoolid='+schoolid+'&sortidmore='+sortid+'&cutSmallImg=true',
+		url:'/talker/commodity/page',
+		data:'status=1'+'&schoolid='+schoolid+'&sortidmore='+sortid+'&cutSmallImg=true'+'&pageNum='+page,
 		dataType:'json',
 		success:function(data){
-			var commoditys = data;
+			var commoditys = data.data;
 			var htm = '';
 			for ( var int = 0; int < commoditys.length; int++) {
 				htm += '<div class="commodity-list">' +
@@ -90,9 +92,11 @@ function getCommodity(schoolid,sortid){
 				        '</div>';
 			}
 			$('.warp-commodity-list').html(htm);
-		},
-		error:function(){
-			
+			//初始化分页
+			$(".tcdPageCode").createPage({
+				pageCount:data.pageCount,
+				current:data.pageNum
+			});
 		}
 	});
 }
