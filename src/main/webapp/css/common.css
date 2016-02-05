@@ -117,6 +117,8 @@ a {
 	border-right: none;
 	font-size: 16px;
 	padding-left: 5px;
+	-webkit-appearance: none;
+	border-radius:0px;
 }
 
 #search {
@@ -129,6 +131,7 @@ a {
 	font-size: 14px;
 	color: #fff;
 	font-weight: bold;
+	vertical-align: top;
 }
 
 .top-warp-center-right {
