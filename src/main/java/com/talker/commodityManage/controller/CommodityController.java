@@ -15,6 +15,7 @@ import com.talker.commodityManage.pojo.Page;
 import com.talker.commodityManage.service.CommodityService;
 import com.talker.sortManage.pojo.Sort;
 import com.talker.system.controller.AbstractController;
+import com.talker.util.CookieUtil;
 import com.talker.util.ResponseModel;
 
 /**
@@ -64,6 +65,13 @@ public class CommodityController extends AbstractController {
 	@RequestMapping(value="page")
 	@ResponseBody
 	public Page getCommodityPage(HttpServletRequest request, Commodity c){
+		return commodityService.getCommodityPage(request, c);
+	}
+	
+	@RequestMapping(value="me")
+	@ResponseBody
+	public Page getMeCommodity(HttpServletRequest request,Commodity c){
+		c.setUserid(CookieUtil.getCookieInteger(CookieUtil.CookieValue.COOKIE_USER_ID, request));
 		return commodityService.getCommodityPage(request, c);
 	}
 	

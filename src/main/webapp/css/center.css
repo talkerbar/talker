@@ -87,7 +87,7 @@ li.lastli{
 }
 /* common */
 
-/* �ҵ����� */
+/* userinfo */
 .userinfo{
 	width: 510px;
 	border-right: 1px solid #ddd;
@@ -268,9 +268,9 @@ label[for=male],label[for=female]{
 	background: #ff649d;
 	color: #fff;
 }
-/* �ҵ����� */
+/* userinfo*/
 
-/* �ҵı���  */
+/* commodity  */
 .warp-commodity-list{
 	width: 480px;
 	margin: 20px;
@@ -359,9 +359,13 @@ b.color{
 	background: #ff649d!important;
 	color:#fff!important;
 }
-/* �ҵı��� */
+.center-page-left{
+	box-sizing:brder-box;
+	padding-left: 160px;
+}
+/* commodity */
 
-/* �ҵ���Ϣ */
+/*  */
 .warp-msg{
 	width: 900px;
 	margin: 40px auto;

@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   	<title>商品列表-大学生生活服务平台</title>
   	<script src="/talker/js/jquery.min.js"></script>
+  	<script src="/talker/js/page/jquery.page.js"></script>
   	<script src="/talker/js/commodity.js"></script>
   	<script src="/talker/js/center.js"></script>
   	<script src="/talker/js/Image2Base64Head.js"></script>
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="/talker/js/imgAreaSelect/css/imgareaselect-default.css" />
     <link rel="stylesheet" href="/talker/css/common.css">
     <link rel="stylesheet" href="/talker/css/center.css">
+    <link rel="stylesheet" href="/talker/css/page.css">
   </head>
   <body>
   	<!-- Top Begin -->
@@ -78,31 +80,11 @@
         </ul>
       </div>
       <div class="warp-center-content floatLeft">
-	      <c:forEach var="data" items="${list }">
-	        <div class="warp-commodity-list floatLeft">
-	            <div class="warp-commodity-list-img floatLeft">
-		            <a title="${data.title }" href="/talker/public/item?id=${data.id }"><img src="/talker/upload/${data.images[0].path }"></a>
-	            </div>
-	            <div class="warp-commodity-list-onfo floatLeft">
-	              <p class="title"><a title="${data.title }" href="/talker/public/item?id=${data.id }">${data.title }</a></p>
-	              <p class="price"><b class="opacity">￥</b><b class="color">${data.newprice }</b></p>
-	              <p class="viewinfo"><span>浏览：${data.visits }</span><span>电话：${data.phoneRecords }</span><span>留言：0</span></p>
-	            </div>
-	            <div class="warp-commodity-list-operat floatLeft">
-		            <c:choose>
-		            	<c:when test="${data.status == 1 }">
-		            		<p class="down" id="${data.id }">下架</p>
-		            	</c:when>
-		            	<c:otherwise>
-			              	<p class="up" id="${data.id }">上架</p>
-		            	</c:otherwise>
-		            </c:choose>
-		            <p class="del" id="${data.id }">删除</p>
-	            </div>
-	        </div>
-	      </c:forEach>
       </div>
       </div>
+      <!-- 分页开始  -->
+	  <div class="tcdPageCode center-page-left"></div>
+	  <!-- 分页结束 -->
       <!-- 提示  -->
    	  <div class="tip">
     	<div class="tip-content"></div>

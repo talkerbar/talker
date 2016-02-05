@@ -121,13 +121,8 @@ public class CommodityServiceImpl implements CommodityService {
 	}
 
 	public Page getCommodityPage(HttpServletRequest request, Commodity c) {
-		List<Commodity> list = commodityDao.getCommodity(c);
+		List<Commodity> list = getCommodity(request, c);
 		int pageCount = this.getPageCount(commodityDao.getCount(c), c.getPageSize());
-		for (Commodity commodity : list) {
-			if(!commodity.getImages().isEmpty()){
-				ImgCut.readUsingImageReader(request, commodity.getImages().get(0).getPath());
-			}
-		}
 		return Page.buildPage(c.getPageNum(), pageCount, list);
 	}
 
