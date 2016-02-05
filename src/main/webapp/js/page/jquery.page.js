@@ -3,6 +3,14 @@
 2014-08-05 ch
 **/
 (function($){
+	$.fn.createPage = function(options){
+		var args = $.extend({
+			pageCount : 10,
+			current : 1,
+			backFn : function(){}
+		},options);
+		ms.init(this,args);
+	}
 	var ms = {
 		init:function(obj,args){
 			return (function(){
@@ -62,6 +70,8 @@
 		//绑定事件
 		bindEvent:function(obj,args){
 			return (function(){
+				//移除事件
+				obj.off();
 				obj.on("click","a.tcdNumber",function(){
 					var current = parseInt($(this).text());
 					ms.fillHtml(obj,{"current":current,"pageCount":args.pageCount});
@@ -87,13 +97,5 @@
 				});
 			})();
 		}
-	}
-	$.fn.createPage = function(options){
-		var args = $.extend({
-			pageCount : 10,
-			current : 1,
-			backFn : function(){}
-		},options);
-		ms.init(this,args);
 	}
 })(jQuery);
