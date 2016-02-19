@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.talker.apiManage.cache.MemcachedPool;
 import com.talker.system.security.pojo.Menu;
 import com.talker.system.security.service.MenuService;
-import com.talker.system.security.service.impl.HandelMenuAndRight;
 import com.talker.system.security.vo.UserSession;
 import com.talker.util.CookieUtil;
 import com.talker.util.ResponseModel;
@@ -25,8 +24,8 @@ public class MenuController {
 	@Autowired
 	private MenuService menuService;
 	
-	@Autowired
-	private HandelMenuAndRight hmar;
+	/*@Autowired
+	private HandelMenuAndRight hmar;*/
 	
 	@RequestMapping(value="add")
 	@ResponseBody
@@ -72,7 +71,7 @@ public class MenuController {
 		boolean success = false;
 		String message = "用户未登陆";
 		String sessionId = CookieUtil.getCookieString(CookieUtil.CookieValue.COOKIE_SESSION_ID, request);
-		UserSession us = (UserSession)MemcachedPool.get(sessionId);
+		UserSession us = "".equals(sessionId)?null:(UserSession)MemcachedPool.get(sessionId);
 		if(sessionId!=null && us!=null){
 			success = true;
 			message = "用户已登陆";

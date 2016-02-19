@@ -57,7 +57,7 @@ public class SecurityInterceptor extends HandlerInterceptorAdapter{
 		if(needInterceptor(uri)){
 			//需要检查权限的逻辑-检查是否登陆
 			String sessionId = CookieUtil.getCookieString(CookieUtil.CookieValue.COOKIE_SESSION_ID, request);
-			UserSession us = (UserSession)MemcachedPool.get(sessionId);
+			UserSession us = "".equals(sessionId)?null:(UserSession)MemcachedPool.get(sessionId);
 			if(us==null || us.getUserLogin()==null){
 				log.debug("user not login!");
 				String contextPath = request.getContextPath();
