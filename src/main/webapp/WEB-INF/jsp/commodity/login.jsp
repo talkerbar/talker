@@ -1,8 +1,11 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="utf-8">
-<title>会员注册-大学生生活服务平台</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>会员登录-大学生生活服务平台</title>
   	<script src="/talker/js/jquery.min.js"></script>
     <script src="/talker/js/login.js"></script>
     <link rel="stylesheet" href="/talker/css/login.css">
@@ -22,27 +25,25 @@
 				<div class="content">
 					<ul>
 						<li class="desc">
-							<span>免费注册</span>
-							<span><a href="/talker/public/login">登录</a></span>
+							<span>登录</span>
+							<span><a href="/talker/public/regist">免费注册</a></span>
 						</li>
-						<li class="regist info">
+						<li class="username info">
 							<span class="icon-username icon"></span>
-							<input type="text" name="username" id="username" maxlength="11" placeholder="手机号"/>
+							<input type="tel" name="username" id="username" maxlength="11" placeholder="手机号"/>
 						</li>
-						<li class="regist security_code">
-							<input type="text" name="security_code" id="security_code" maxlength="6" placeholder="验证码"/>
-							<button id="code">获取验证码</button>
-						</li>
-						<li class="regist info">
+						<li class="password info">
 							<span class="icon-password icon"></span>
 							<input type="password" name="password" id="password" placeholder="6-18位密码"/>
 						</li>
-						<li class="regist info">
-							<span class="icon-password icon"></span>
-							<input type="password" name="repassword" id="repassword" placeholder="再次输入密码"/>
+						<li class="help">
+							<a href="">忘记密码？</a>
 						</li>
-						<li class="confirm-regist">
-							<button class="submit free_regist">免费注册</button>
+						<li class="confirm-login">
+							<button class="submit login">登陆</button>
+						</li>
+						<li class="other">
+							
 						</li>
 					</ul>
 				</div>

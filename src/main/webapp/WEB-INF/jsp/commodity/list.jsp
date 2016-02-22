@@ -1,11 +1,17 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">8">
   	<title>商品列表-大学生生活服务平台</title>
   	<script src="/talker/js/jquery.min.js"></script>
+  	<script src="/talker/js/page/jquery.page.js"></script>
+  	<script src="/talker/js/list.js"></script>
     <link rel="stylesheet" href="/talker/css/common.css">
-    <link rel="stylesheet" href="/talker/css/success.css">
+    <link rel="stylesheet" href="/talker/css/list.css">
+    <link rel="stylesheet" href="/talker/css/page.css">
   </head>
   <body>
   	<!-- Top Begin -->
@@ -56,19 +62,63 @@
 		</div>
 	</div>
 	<!-- Top End -->
+    
+    <!-- 学校和分类开始 -->
+    <div class="warp-school-sort">
+       <div class="warp-school">
+          <div class="warp-school-title inline-block">
+            	学校
+          </div><!--
+       --><div class="warp-school-con inline-block">
+            <ul id="all-school-name">
+            </ul>
+          </div>
+       </div>
+       <div class="warp-sort">
+         <div class="warp-sort-title inline-block">
+            	分类
+          </div><!--
+       --><div class="warp-sort-con inline-block">
+            <ul id="all-sort-name">
+            </ul>
+          </div>
+       </div>
+    </div>
+    <!-- 学校和分类结束 -->
 
-    <!-- success -->
-    <div class="success-warp">
-      <div class="content">
-        <h3 class="success-word">${ResponseModel.message }</h3>
-        <p class="success-warn">卖闲置不用缴纳保证金，请警惕骗子买家提示无法完成付款，通过其他旺旺或邮箱诱导缴纳保证金的行为。</p>
+    <!-- 排序开始 -->
+    <div class="warp-sequence">
+      <div class="warp-sequence-left">
+         <ul>
+           <li class="current">热度</li>
+           <li>最新</li>
+           <li>价格</li>
+           <!-- <li>距离</li> -->
+         </ul>
       </div>
-      <div class="button-warp">
-        <a href="/talker/center/commodity">查看宝贝</a><a href="/talker/center/release">继续添加</a>
+      <div class="warp-sequence-right">
       </div>
     </div>
-    <!-- success -->
+    <!-- 排序结束 -->
 
+    <!-- 商品列表开始 -->
+    <div class="warp-commodity">
+      <div class="warp-commodity-list">
+		  <div class="loading">
+			  <img src="/talker/images/loading.gif">
+		  </div>        
+      </div>
+    </div>
+    <!-- 商品列表结束 -->
+    
+    <!-- 分页开始  -->
+    <div class="tcdPageCode"></div>
+    <!-- 分页结束 -->
+    
+    <!-- 参数  -->
+	<input type="hidden" id="sortidmore" value="${sortidmore}"/>
+	<input type="hidden" id="schoolidmore"/>
+	
     <!-- talker bottom  -->
     <div class="bottom-warp">
       <ul>
