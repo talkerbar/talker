@@ -98,6 +98,9 @@ dd{
 dd:hover{
 	background: #ddd;
 }
+.current_select{
+	background: #ddd;
+}
 /* 统一提示 */
 .tip{
 	width: 300px;

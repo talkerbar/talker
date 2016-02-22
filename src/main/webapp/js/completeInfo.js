@@ -5,13 +5,28 @@ $(function(){
 	});
 
 	/* info-select input keyup事件出现选择框 */
-	$('#school').bind('keyup',function(){
-		autoData($(this).val(),'/talker/school/get','#auto-school');
-		$(this).siblings('dl').show();
+	$('#school').bind('keyup',function(event){
+		var keyCode = event.keyCode;
+		if(keyCode!=37&&keyCode!=38&&keyCode!=39&&keyCode!=40){
+			autoData($(this).val(),'/talker/school/get','#auto-school');
+			$(this).siblings('dl').show();
+		}else{
+			switch (keyCode) {
+			case 38:
+				break;
+			case 40:
+				
+//				$('#auto-school dd').first().addClass('current_select');
+				break;
+			}
+		}
 	});
-	$('#professional').bind('keyup',function(){
-		autoData($(this).val(),'/talker/professional/get','#auto-professional');
-		$(this).siblings('dl').show();
+	$('#professional').bind('keyup',function(event){
+		var keyCode = event.keyCode;
+		if(keyCode!=37&&keyCode!=38&&keyCode!=39&&keyCode!=40){
+			autoData($(this).val(),'/talker/professional/get','#auto-professional');
+			$(this).siblings('dl').show();
+		}
 	});
 	/* info-select input 失去焦点隐藏 */
 	$('body').bind('click',function(){

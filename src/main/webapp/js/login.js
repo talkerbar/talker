@@ -11,6 +11,12 @@ $(function(){
 	$('.free_regist').bind('click',function(){
 		regist(this);
 	});
+	//Enter登录事件
+	$(window).bind('keyup',function(event){
+		if(event.keyCode==13){
+			login($('.login'));
+		}
+	});
 });
 //登录
 function login(obj){

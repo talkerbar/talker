@@ -1,8 +1,18 @@
-#Mon Jan 18 14:02:22 CST 2016
+#Mon Feb 22 13:20:04 CST 2016
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
 encoding//src/main/resources=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/commodity/commodity.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/jsp/commodity/completeInfo.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/commodity/index.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/commodity/info.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/commodity/item.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/commodity/list.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/commodity/login.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/commodity/news.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/commodity/regist.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/commodity/release.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/commodity/success.jsp=UTF-8
 encoding//src/main/webapp/css/common.css=UTF-8
 encoding//src/main/webapp/css/index.css=UTF-8
 encoding//src/test/java=UTF-8
